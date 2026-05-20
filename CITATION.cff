@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use MRV-EffScreen, please cite the project repository and the associated paper when available."
 title: "MRV-EffScreen: Public THETIS-MRV Ship Energy-Efficiency Stratification and Consistency Screening"
 type: software
-version: 0.1.0
+version: 0.3.1
 date-released: 2026-05-20
 repository-code: "https://github.com/TristanLib/MRV-EffScreen"
 url: "https://github.com/TristanLib/MRV-EffScreen"

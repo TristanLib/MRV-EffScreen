@@ -226,9 +226,9 @@ def run_medium_error_analysis(rows: list[dict[str, str]]) -> tuple[list[dict[str
         for (ship_type, label), count in sorted(aggregate.items(), key=lambda item: (-item[1], item[0]))
     ]
     samples.sort(key=lambda row: float(row["prediction_confidence"]), reverse=True)
-    anonymized_samples = []
+    identifier_removed_samples = []
     for rank, row in enumerate(samples[:100], start=1):
-        anonymized_samples.append(
+        identifier_removed_samples.append(
             {
                 "sample_rank": str(rank),
                 "ship_type": row["ship_type"],
@@ -243,7 +243,7 @@ def run_medium_error_analysis(rows: list[dict[str, str]]) -> tuple[list[dict[str
                 "distance_efficiency_rank_pct": row["distance_efficiency_rank_pct"],
             }
         )
-    return aggregate_rows, anonymized_samples
+    return aggregate_rows, identifier_removed_samples
 
 
 def make_figures(metrics: list[dict[str, str]], importance_rows: list[dict[str, str]]) -> None:

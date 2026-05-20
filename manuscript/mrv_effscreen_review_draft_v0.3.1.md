@@ -1,6 +1,6 @@
 # MRV-EffScreen: Temporal Generalization and Consistency Screening of Ship Energy-Efficiency Labels from Public THETIS-MRV Emission Reports
 
-Version: English manuscript draft v0.3  
+Version: English internal review draft v0.3.1  
 Date: 2026-05-20  
 Article type: Article  
 Project abbreviation: MRV-EffScreen  
@@ -13,7 +13,7 @@ ORCID: 0009-0002-0772-5138
 
 ## Abstract
 
-Public ship-level emission reports provide a transparent basis for data-driven maritime decarbonization studies, but predictive analyses must avoid target leakage and must be evaluated under realistic temporal shifts. This study proposes MRV-EffScreen, a reproducible framework for relative ship energy-efficiency stratification and emission consistency screening using public EU THETIS-MRV emission reports. We harmonized 2018-2024 public records, constructed ship-type-year tertile labels from CO2 emissions per distance, and evaluated non-leakage static and non-emission operational features under a temporal design. The main experiment trained models on 2018-2021 records, validated on 2022 records, tested on 2023 records, and used 2024 full-year reports as an external-year check. The processed dataset contained 90,745 records, 22,551 unique IMO numbers, and 17 ship types; the main labeled 2018-2023 experiment contained 73,045 records. Histogram-based gradient boosting with non-emission operational features achieved Macro-F1 = 0.603 and balanced accuracy = 0.605 on the 2023 temporal test set, while the best random stratified split reached Macro-F1 = 0.657, indicating optimistic random-split estimates. Class-level analysis showed that the medium class remained the main ambiguity source. A separate consistency-screening module combining Isolation Forest, Local Outlier Factor, and regression residual ranking identified 226 all-method candidates at a 2% threshold. These anonymized candidates are intended for manual inspection, not compliance adjudication.
+Public ship-level emission reports provide a transparent basis for data-driven maritime decarbonization studies, but predictive analyses must avoid target leakage and must be evaluated under realistic temporal shifts. This study proposes MRV-EffScreen, a reproducible framework for relative ship energy-efficiency stratification and emission consistency screening using public EU THETIS-MRV emission reports. We harmonized 2018-2024 public records, constructed ship-type-year tertile labels from CO2 emissions per distance, and evaluated non-leakage static and non-emission operational features under a temporal design. The main experiment trained models on 2018-2021 records, validated on 2022 records, tested on 2023 records, and used 2024 full-year reports as an external-year check. The processed dataset contained 90,745 records, 22,551 unique IMO numbers, and 17 ship types; the main labeled 2018-2023 experiment contained 73,045 records. Histogram-based gradient boosting with non-emission operational features achieved Macro-F1 = 0.603 and balanced accuracy = 0.605 on the 2023 temporal test set, while the best random stratified split reached Macro-F1 = 0.657, indicating optimistic random-split estimates. Class-level analysis showed that the medium class remained the main ambiguity source. A separate consistency-screening module combining Isolation Forest, Local Outlier Factor, and regression residual ranking identified 226 all-method candidates at a 2% threshold. Public candidate tables remove direct vessel identifiers and are intended for manual inspection, not compliance adjudication.
 
 ## Keywords
 
@@ -118,7 +118,19 @@ The primary evaluation is temporal:
 
 A random stratified 80/20 split over 2018-2023 is included only as an optimistic comparison. Practical use would require applying a model trained on earlier reports to later reports; therefore, temporal evaluation is the main evidence.
 
-Three classifiers are evaluated: Logistic Regression with class balancing, Random Forest with balanced subsampling, and Histogram-based Gradient Boosting. Random forests and gradient boosting are established tabular-learning baselines and have also been widely used in ship energy-consumption studies [12-14]. Numerical features are median-imputed. Categorical features are one-hot encoded for Logistic Regression and Random Forest and ordinal-encoded for Histogram-based Gradient Boosting. Macro-F1 and balanced accuracy are the primary metrics. The implementation uses Python and scikit-learn [18].
+Three classifiers are evaluated: Logistic Regression with class balancing, Random Forest with balanced subsampling, and Histogram-based Gradient Boosting. Random forests and gradient boosting are established tabular-learning baselines and have also been widely used in ship energy-consumption studies [12-14]. Numerical features are median-imputed. Categorical features are one-hot encoded for Logistic Regression and Random Forest and ordinal-encoded for Histogram-based Gradient Boosting. Macro-F1 and balanced accuracy are the primary metrics. The implementation uses Python and scikit-learn [18]. Table 2 summarizes the core reproducible configuration.
+
+**Table 2. Core experimental configuration used for reproducible modeling.**
+
+| Component | Setting | Notes |
+|---|---|---|
+| Random seed | 42 | Used for model training, random split, permutation importance, and residual cross-validation. |
+| Logistic Regression | `class_weight=balanced`; `solver=lbfgs`; `max_iter=800` | Linear baseline with one-hot categorical encoding. |
+| Random Forest | `n_estimators=180`; `max_depth=16`; `min_samples_leaf=5` | Uses balanced-subsample class weighting. |
+| Histogram Gradient Boosting | `learning_rate=0.05`; `max_iter=220`; `max_leaf_nodes=31` | Uses ordinal categorical encoding and L2 regularization = 0.05. |
+| Random comparison | Stratified 80/20 split | Included only as an optimistic reference against temporal evaluation. |
+| Anomaly screening | Ship-type-specific models; minimum 300 eligible rows | Primary per-method threshold is 2%; sensitivity uses 1%, 2%, and 5%. |
+| Residual screening | HGB regressor; 3-fold cross-validation | Predicts log-transformed CO2 per distance from consistency fields. |
 
 ### 3.5. Ship-type ablation, interpretability, and error analysis
 
@@ -142,24 +154,35 @@ The consensus anomaly score is the average of within-ship-type rank percentiles 
 
 ### 4.1. Main temporal classification
 
-Table 2 reports the main classification results. The best temporal result is obtained by Histogram-based Gradient Boosting with the `operational_no_emission` feature set. On the 2023 test set, it reaches Macro-F1 = 0.603 and balanced accuracy = 0.605. The `strict_static` model is close, with Macro-F1 = 0.601 and balanced accuracy = 0.603, indicating that the added non-emission operational fields provide only a small improvement.
+Table 3 reports the main classification results. The best temporal result is obtained by Histogram-based Gradient Boosting with the Operational feature set. On the 2023 test set, it reaches Macro-F1 = 0.603 and balanced accuracy = 0.605. The Static model is close, with Macro-F1 = 0.601 and balanced accuracy = 0.603, indicating that the added non-emission operational fields provide only a small improvement.
 
-**Table 2. Classification performance under temporal, external-year, and random stratified evaluation settings.**
+**Table 3. Classification performance under temporal, external-year, and random stratified evaluation settings.**
 
-| Scenario | Split | Feature set | Model | Rows | Macro-F1 | Balanced accuracy |
-|---|---|---|---|---:|---:|---:|
-| Temporal | 2023 test | operational_no_emission | HistGradientBoosting | 12,615 | 0.603 | 0.605 |
-| Temporal | 2023 test | strict_static | HistGradientBoosting | 12,615 | 0.601 | 0.603 |
-| Temporal | 2023 test | operational_no_emission | Random Forest | 12,615 | 0.560 | 0.573 |
-| Temporal | 2023 test | strict_static | Random Forest | 12,615 | 0.556 | 0.567 |
-| External | 2024 full-year | operational_no_emission | HistGradientBoosting | 12,905 | 0.585 | 0.587 |
-| External | 2024 full-year | strict_static | HistGradientBoosting | 12,905 | 0.580 | 0.582 |
-| Random stratified | random test | strict_static | HistGradientBoosting | 14,609 | 0.657 | 0.660 |
-| Random stratified | random test | operational_no_emission | HistGradientBoosting | 14,609 | 0.655 | 0.658 |
+| Split | Feature set | Model | Rows | Macro-F1 | Balanced accuracy |
+|---|---|---|---:|---:|---:|
+| 2023 test | operational_no_emission | HistGradientBoosting | 12,615 | 0.603 | 0.605 |
+| 2023 test | strict_static | HistGradientBoosting | 12,615 | 0.601 | 0.603 |
+| 2023 test | operational_no_emission | Random Forest | 12,615 | 0.560 | 0.573 |
+| 2023 test | strict_static | Random Forest | 12,615 | 0.556 | 0.567 |
+| 2024 full-year | operational_no_emission | HistGradientBoosting | 12,905 | 0.585 | 0.587 |
+| 2024 full-year | strict_static | HistGradientBoosting | 12,905 | 0.580 | 0.582 |
+| Random test | strict_static | HistGradientBoosting | 14,609 | 0.657 | 0.660 |
+| Random test | operational_no_emission | HistGradientBoosting | 14,609 | 0.655 | 0.658 |
 
 The random stratified evaluation gives higher performance than the temporal evaluation. The best random split reaches Macro-F1 = 0.657, compared with Macro-F1 = 0.603 in the 2023 temporal test. This gap supports the use of temporal extrapolation as the main generalization test.
 
 Class-level metrics show where the temporal model is strongest and weakest. On the 2023 temporal test set, the best model reaches F1 = 0.694 for the efficient class, F1 = 0.487 for the medium class, and F1 = 0.629 for the inefficient class. The corresponding recalls are 0.745, 0.485, and 0.585, respectively. On the 2024 full-year external check, efficient-class F1 remains similar at 0.692, while medium and inefficient F1 decline to 0.479 and 0.584. This pattern confirms that the middle tertile is the least stable class and that the external-year decrease is concentrated mainly in the boundary and upper-intensity classes.
+
+**Table 4. Class-level metrics for the best non-leakage temporal classifier.**
+
+| Split | Class | Precision | Recall | F1 | Support | Predicted rows |
+|---|---|---:|---:|---:|---:|---:|
+| 2023 test | efficient | 0.649 | 0.745 | 0.694 | 4,210 | 4,833 |
+| 2023 test | medium | 0.488 | 0.485 | 0.487 | 4,204 | 4,175 |
+| 2023 test | inefficient | 0.681 | 0.585 | 0.629 | 4,201 | 3,607 |
+| 2024 external | efficient | 0.647 | 0.743 | 0.692 | 4,314 | 4,953 |
+| 2024 external | medium | 0.467 | 0.492 | 0.479 | 4,305 | 4,539 |
+| 2024 external | inefficient | 0.659 | 0.525 | 0.584 | 4,286 | 3,413 |
 
 ![Figure 3. Macro-F1 on the 2023 temporal test set for non-leakage feature sets and baseline classifiers.](../reports/figures/mrv_baseline_macro_f1_temporal_test.svg)
 
@@ -167,9 +190,9 @@ Class-level metrics show where the temporal model is strongest and weakest. On t
 
 ### 4.2. Ship-type ablation
 
-Table 3 shows that ship-type-specific modeling has heterogeneous effects. General cargo ship benefits under both feature sets, and Container ship improves under `strict_static`. Oil tanker shows smaller gains. Bulk carrier does not improve, and Container ship under `operational_no_emission` is slightly worse than the unified model.
+Table 5 shows that ship-type-specific modeling has heterogeneous effects. General cargo ship benefits under both feature sets, and Container ship improves under `strict_static`. Oil tanker shows smaller gains. Bulk carrier does not improve, and Container ship under `operational_no_emission` is slightly worse than the unified model.
 
-**Table 3. Unified versus ship-type-specific modeling for the five largest ship categories.**
+**Table 5. Unified versus ship-type-specific modeling for the five largest ship categories.**
 
 | Ship type | Feature set | Unified Macro-F1 | Ship-type Macro-F1 | Delta |
 |---|---|---:|---:|---:|
@@ -192,15 +215,15 @@ The correct interpretation is therefore selective specialization rather than uni
 
 Permutation importance identifies `technical_efficiency_value` as the strongest non-leakage feature, with a Macro-F1 drop of 0.228 after permutation. The next strongest predictors are `ship_type`, `technical_efficiency_type`, `port_of_registry`, and `time_spent_at_sea_hours`.
 
-**Table 4. Permutation importance and dominant medium-class error patterns.**
+**Table 6. Permutation importance and dominant medium-class error patterns.**
 
 | Analysis | Rank | Item | Value | Interpretation |
 |---|---:|---|---:|---|
-| Permutation importance | 1 | technical_efficiency_value | 0.228 | Macro-F1 drop |
-| Permutation importance | 2 | ship_type | 0.164 | Macro-F1 drop |
-| Permutation importance | 3 | technical_efficiency_type | 0.062 | Macro-F1 drop |
-| Permutation importance | 4 | port_of_registry | 0.024 | Macro-F1 drop |
-| Permutation importance | 5 | time_spent_at_sea_hours | 0.013 | Macro-F1 drop |
+| Permutation importance | 1 | Technical efficiency value | 0.228 | Macro-F1 drop |
+| Permutation importance | 2 | Ship type | 0.164 | Macro-F1 drop |
+| Permutation importance | 3 | Technical efficiency type | 0.062 | Macro-F1 drop |
+| Permutation importance | 4 | Port of registry | 0.024 | Macro-F1 drop |
+| Permutation importance | 5 | Time spent at sea | 0.013 | Macro-F1 drop |
 | Medium error | 1 | Bulk carrier medium -> efficient | 339 | Most frequent medium-class error |
 | Medium error | 2 | Container ship medium -> inefficient | 261 | Most frequent medium-class error |
 | Medium error | 3 | General cargo ship medium -> inefficient | 176 | Most frequent medium-class error |
@@ -215,7 +238,7 @@ The medium class is the main ambiguity source, which is consistent with the tert
 
 The consistency-screening experiment models 85,932 complete annual rows across 14 ship types. At the 2% threshold, each method flags 1,727 rows. The all-three-method overlap contains 226 rows, while the at-least-two-method set contains 1,067 rows. The top 200 consensus candidates are mainly from Bulk carrier, Oil tanker, General cargo ship, Chemical tanker, and Container ship.
 
-**Table 5. Sensitivity of anomaly-screening candidates under 1%, 2%, and 5% ship-type-specific thresholds.**
+**Table 7. Sensitivity of anomaly-screening candidates under 1%, 2%, and 5% ship-type-specific thresholds.**
 
 | Threshold | Isolation rows | LOF rows | Residual rows | All three | At least two | Any method | Top 200 at least two | Top 200 all three |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -225,7 +248,7 @@ The consistency-screening experiment models 85,932 complete annual rows across 1
 
 At the strict 1% setting, 189 of the top 200 consensus candidates are still flagged by at least two methods. At the broad 5% setting, all top 200 candidates are flagged by all three methods. These results indicate that the top consensus list is relatively stable across reasonable threshold choices.
 
-The public candidate table is anonymized and should be read as a pattern summary rather than a list of vessel-level findings. Within the top 200 consensus candidates, 182 rows are flagged by all three methods at the 2% threshold and 18 rows are flagged by two methods. The largest ship-type groups are Bulk carrier (59), Oil tanker (35), General cargo ship (22), Chemical tanker (19), and Container ship (17). Directional diagnostics split into low-intensity or low-volume patterns (77 rows), high-intensity or high-volume patterns (51 rows), and mixed patterns (72 rows). This diversity supports the use of a manual-review queue rather than a single deterministic anomaly rule.
+The public candidate table removes direct vessel identifiers and should be read as a pattern summary rather than a list of vessel-level findings. Within the top 200 consensus candidates, 182 rows are flagged by all three methods at the 2% threshold and 18 rows are flagged by two methods. The largest ship-type groups are Bulk carrier (59), Oil tanker (35), General cargo ship (22), Chemical tanker (19), and Container ship (17). Directional diagnostics split into low-intensity or low-volume patterns (77 rows), high-intensity or high-volume patterns (51 rows), and mixed patterns (72 rows). This diversity supports the use of a manual-review queue rather than a single deterministic anomaly rule.
 
 ![Figure 7. Ship-type distribution of the top 200 anomaly-screening candidates.](../reports/figures/mrv_anomaly_top_ship_types.svg)
 
@@ -241,7 +264,7 @@ Third, ship-type specialization is useful only for some categories. This is cons
 
 The feature-importance results are plausible and useful for interpretation. Technical efficiency value is the strongest non-leakage predictor, followed by ship type and technical efficiency type. This does not establish causality. It indicates that technical efficiency information is strongly associated with relative operational CO2-per-distance strata in the public MRV records.
 
-The consistency-screening module should be interpreted cautiously. It uses variables that would be leakage-prone in classification, but those same variables are relevant for identifying records with unusual fuel, CO2, distance, time, and intensity combinations. Because no external audit labels are available, the output is a prioritized manual-inspection list rather than proof of incorrect reporting. For this reason, public supplementary tables use anonymized candidate ranks and pattern fields instead of binding vessel identifiers to anomaly-screening judgments.
+The consistency-screening module should be interpreted cautiously. It uses variables that would be leakage-prone in classification, but those same variables are relevant for identifying records with unusual fuel, CO2, distance, time, and intensity combinations. Because no external audit labels are available, the output is a prioritized manual-inspection list rather than proof of incorrect reporting. For this reason, public supplementary tables remove direct vessel identifiers and use candidate ranks and pattern fields instead of binding vessel identifiers to anomaly-screening judgments.
 
 Several limitations remain. The tertile label is relative and data-internal; it is not equivalent to CII, EEXI, or any compliance status. The data are annual aggregates and cannot capture voyage-level drivers such as speed, route, weather, loading, or port waiting time. The 2024 schema is broader than earlier schemas, so external-year interpretation requires care. Finally, the current models are deliberately lightweight; future work could compare specialized gradient-boosting libraries and could integrate AIS-derived operational variables where licensing permits.
 
@@ -251,7 +274,7 @@ This study presents MRV-EffScreen, a reproducible framework for public THETIS-MR
 
 ## Supplementary Materials
 
-The following generated artifacts are intended for supplementary release or repository documentation: data dictionary, feature-set definitions, workbook inventory, schema audit tables, model metrics, confusion matrices, ship-type ablation results, anomaly-screening scores, anomaly-sensitivity tables, and source scripts. Final supplementary packaging should be updated again if a Zenodo DOI is minted.
+The following generated artifacts are intended for supplementary release or repository documentation: data dictionary, feature-set definitions, workbook inventory, schema audit tables, model metrics, confusion matrices, ship-type ablation results, identifier-removed anomaly-screening tables, anomaly-sensitivity tables, and source scripts. Final supplementary packaging should be updated again if a Zenodo DOI is minted.
 
 ## Author Contributions
 

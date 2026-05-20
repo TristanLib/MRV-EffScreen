@@ -364,7 +364,7 @@ def build_results_index() -> list[dict[str, str]]:
         {
             "result_block": "anomaly_screening",
             "artifact": "reports/tables/mrv_anomaly_top_candidates.csv",
-            "primary_use": "Anonymized top MRV consistency-screening candidates",
+            "primary_use": "Identifier-removed top MRV consistency-screening candidates",
             "notes": "Describe strictly as anomaly-screening candidates, not violations; public table excludes IMO numbers and ship names.",
         },
         {

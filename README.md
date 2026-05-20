@@ -21,10 +21,10 @@ This public repository is maintained as the reproducibility package for the pape
 Current manuscript artifacts:
 
 ```text
-manuscript/mrv_effscreen_jmse_draft_v0.3.md
-manuscript/jmse_latex/mrv_effscreen_jmse_v0.3.tex
-output/pdf/MRV-EffScreen_JMSE_en_v0.3.pdf
-output/pdf/MRV-EffScreen_JMSE_en_latest.pdf
+manuscript/mrv_effscreen_review_draft_v0.3.1.md
+manuscript/latex/mrv_effscreen_review_v0.3.1.tex
+output/pdf/MRV-EffScreen_internal_review_en_v0.3.1.pdf
+output/pdf/MRV-EffScreen_internal_review_en_latest.pdf
 ```
 
 Repository:
@@ -62,8 +62,8 @@ src/data/download_mrv_public_reports.sh
 Compile the LaTeX draft after installing TeX Live or MacTeX:
 
 ```bash
-cd manuscript/jmse_latex
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build mrv_effscreen_jmse_v0.3.tex
+cd manuscript/latex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build mrv_effscreen_review_v0.3.1.tex
 ```
 
 ## Citation
