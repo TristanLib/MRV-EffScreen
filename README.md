@@ -21,9 +21,9 @@ This public repository is maintained as the reproducibility package for the pape
 Current manuscript artifacts:
 
 ```text
-manuscript/mrv_effscreen_jmse_draft_v0.2.md
-manuscript/jmse_latex/mrv_effscreen_jmse_v0.2.tex
-output/pdf/MRV-EffScreen_JMSE_en_v0.2.pdf
+manuscript/mrv_effscreen_jmse_draft_v0.3.md
+manuscript/jmse_latex/mrv_effscreen_jmse_v0.3.tex
+output/pdf/MRV-EffScreen_JMSE_en_v0.3.pdf
 output/pdf/MRV-EffScreen_JMSE_en_latest.pdf
 ```
 
@@ -35,7 +35,7 @@ https://github.com/TristanLib/MRV-EffScreen
 
 ## Repository Scope
 
-The repository intentionally excludes internal planning materials, target-journal notes, weekly progress logs, old draft iterations, Chinese review PDFs, cover letters, and temporary build outputs. Raw THETIS-MRV Excel workbooks are also not stored in Git; use the download script and SHA256 checksums to reproduce the raw-data snapshot.
+The repository intentionally excludes internal planning materials, submission-preparation notes, weekly progress logs, old draft iterations, translated review PDFs, private correspondence drafts, and temporary build outputs. Raw THETIS-MRV Excel workbooks are also not stored in Git; use the download script and SHA256 checksums to reproduce the raw-data snapshot.
 
 ## Reproduction
 
@@ -59,11 +59,11 @@ src/data/download_mrv_public_reports.sh
 .venv/bin/python src/reports/compile_mrv_paper_assets.py
 ```
 
-Compile the JMSE LaTeX draft after installing TeX Live or MacTeX:
+Compile the LaTeX draft after installing TeX Live or MacTeX:
 
 ```bash
 cd manuscript/jmse_latex
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build mrv_effscreen_jmse_v0.2.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build mrv_effscreen_jmse_v0.3.tex
 ```
 
 ## Citation

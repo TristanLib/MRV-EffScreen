@@ -1,0 +1,10 @@
+split,feature_set,model,class_label,precision,recall,f1,support,predicted_rows
+validation_2022,operational_no_emission,hist_gradient_boosting,efficient,0.711479,0.740239,0.725574,4354,4530
+validation_2022,operational_no_emission,hist_gradient_boosting,medium,0.583845,0.525178,0.552960,4349,3912
+validation_2022,operational_no_emission,hist_gradient_boosting,inefficient,0.690972,0.732459,0.711111,4347,4608
+test_2023,operational_no_emission,hist_gradient_boosting,efficient,0.649079,0.745131,0.693796,4210,4833
+test_2023,operational_no_emission,hist_gradient_boosting,medium,0.488383,0.485014,0.486693,4204,4175
+test_2023,operational_no_emission,hist_gradient_boosting,inefficient,0.680898,0.584623,0.629098,4201,3607
+external_2024,operational_no_emission,hist_gradient_boosting,efficient,0.647083,0.742930,0.691702,4314,4953
+external_2024,operational_no_emission,hist_gradient_boosting,medium,0.467063,0.492451,0.479421,4305,4539
+external_2024,operational_no_emission,hist_gradient_boosting,inefficient,0.658951,0.524732,0.584232,4286,3413

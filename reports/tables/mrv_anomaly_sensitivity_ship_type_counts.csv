@@ -4,14 +4,14 @@ contamination,candidate_definition,ship_type,rows,share
 1.00%,all_three,General cargo ship,12,0.123711
 1.00%,all_three,Ro-pax ship,8,0.082474
 1.00%,all_three,Container ship,7,0.072165
-1.00%,all_three,Other ship types,3,0.030928
 1.00%,all_three,Chemical tanker,3,0.030928
-1.00%,all_three,LNG carrier,2,0.020619
+1.00%,all_three,Other ship types,3,0.030928
 1.00%,all_three,Gas carrier,2,0.020619
+1.00%,all_three,LNG carrier,2,0.020619
 1.00%,all_three,Vehicle carrier,2,0.020619
-1.00%,all_three,Refrigerated cargo carrier,1,0.010309
 1.00%,all_three,Container/ro-ro cargo ship,1,0.010309
 1.00%,all_three,Passenger ship,1,0.010309
+1.00%,all_three,Refrigerated cargo carrier,1,0.010309
 1.00%,all_three,Ro-ro ship,1,0.010309
 1.00%,at_least_two,Bulk carrier,143,0.293634
 1.00%,at_least_two,Oil tanker,74,0.151951
@@ -25,8 +25,8 @@ contamination,candidate_definition,ship_type,rows,share
 1.00%,at_least_two,Refrigerated cargo carrier,9,0.018480
 1.00%,at_least_two,LNG carrier,8,0.016427
 1.00%,at_least_two,Ro-ro ship,8,0.016427
-1.00%,at_least_two,Passenger ship,4,0.008214
 1.00%,at_least_two,Container/ro-ro cargo ship,4,0.008214
+1.00%,at_least_two,Passenger ship,4,0.008214
 2.00%,all_three,Bulk carrier,66,0.292035
 2.00%,all_three,Oil tanker,34,0.150442
 2.00%,all_three,Chemical tanker,24,0.106195
@@ -34,13 +34,13 @@ contamination,candidate_definition,ship_type,rows,share
 2.00%,all_three,Container ship,22,0.097345
 2.00%,all_three,Ro-pax ship,14,0.061947
 2.00%,all_three,Vehicle carrier,13,0.057522
-2.00%,all_three,Other ship types,7,0.030973
 2.00%,all_three,Container/ro-ro cargo ship,7,0.030973
+2.00%,all_three,Other ship types,7,0.030973
 2.00%,all_three,LNG carrier,6,0.026549
 2.00%,all_three,Gas carrier,3,0.013274
 2.00%,all_three,Refrigerated cargo carrier,3,0.013274
-2.00%,all_three,Ro-ro ship,2,0.008850
 2.00%,all_three,Passenger ship,2,0.008850
+2.00%,all_three,Ro-ro ship,2,0.008850
 2.00%,at_least_two,Bulk carrier,316,0.296157
 2.00%,at_least_two,Oil tanker,168,0.157451
 2.00%,at_least_two,Chemical tanker,133,0.124649
@@ -64,11 +64,11 @@ contamination,candidate_definition,ship_type,rows,share
 5.00%,all_three,Ro-pax ship,36,0.055988
 5.00%,all_three,LNG carrier,24,0.037325
 5.00%,all_three,Gas carrier,15,0.023328
-5.00%,all_three,Ro-ro ship,15,0.023328
 5.00%,all_three,Other ship types,15,0.023328
+5.00%,all_three,Ro-ro ship,15,0.023328
 5.00%,all_three,Container/ro-ro cargo ship,11,0.017107
-5.00%,all_three,Refrigerated cargo carrier,10,0.015552
 5.00%,all_three,Passenger ship,10,0.015552
+5.00%,all_three,Refrigerated cargo carrier,10,0.015552
 5.00%,at_least_two,Bulk carrier,670,0.255141
 5.00%,at_least_two,Oil tanker,437,0.166413
 5.00%,at_least_two,Container ship,322,0.122620

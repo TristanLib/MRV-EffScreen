@@ -130,8 +130,6 @@ def build_top200_membership(rows: list[dict[str, str]]) -> list[dict[str, str]]:
             "ship_type": row["ship_type"],
             "reporting_year": row["reporting_year"],
             "report_scope": row["report_scope"],
-            "imo_number": row["imo_number"],
-            "ship_name": row["ship_name"],
             "efficiency_label_distance": row["efficiency_label_distance"],
             "consensus_score": row["consensus_score"],
         }
@@ -153,7 +151,7 @@ def build_ship_type_counts(rows: list[dict[str, str]], sets_by_threshold: dict[f
         for definition in ["all_three", "at_least_two"]:
             counter = Counter(row_by_id[rid]["ship_type"] for rid in sets_by_threshold[contamination][definition])
             total = sum(counter.values()) or 1
-            for ship_type, count in counter.most_common():
+            for ship_type, count in sorted(counter.items(), key=lambda item: (-item[1], item[0])):
                 out.append(
                     {
                         "contamination": f"{contamination:.2%}",

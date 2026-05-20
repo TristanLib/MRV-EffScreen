@@ -264,44 +264,49 @@ def screening_explanation(flags: dict[str, bool], signed_residual: float, domina
     return "; ".join(parts)
 
 
-def format_scored_rows(rows: list[dict[str, Any]]) -> list[dict[str, str]]:
+def format_scored_rows(rows: list[dict[str, Any]], include_identity: bool = False) -> list[dict[str, str]]:
     formatted = []
-    for row in rows:
-        formatted.append(
-            {
-                "ship_type": row["ship_type"],
-                "reporting_year": row["reporting_year"],
-                "report_scope": row["report_scope"],
-                "temporal_split": row["temporal_split"],
+    for rank, row in enumerate(rows, start=1):
+        item = {
+            "candidate_rank": str(rank),
+            "ship_type": row["ship_type"],
+            "reporting_year": row["reporting_year"],
+            "report_scope": row["report_scope"],
+            "temporal_split": row["temporal_split"],
+            "technical_efficiency_type": row["technical_efficiency_type"],
+            "technical_efficiency_value": row["technical_efficiency_value"],
+            "total_fuel_consumption_mt": row["total_fuel_consumption_mt"],
+            "fuel_per_distance_kg_nm": row["fuel_per_distance_kg_nm"],
+            "total_co2_emissions_mt": row["total_co2_emissions_mt"],
+            "co2_per_distance_kg_nm": row["co2_per_distance_kg_nm"],
+            "time_spent_at_sea_hours": row["time_spent_at_sea_hours"],
+            "efficiency_label_distance": row["efficiency_label_distance"],
+            "distance_efficiency_rank_pct": row["distance_efficiency_rank_pct"],
+            "isolation_score": f"{float(row['isolation_score']):.6f}",
+            "isolation_rank_pct_ship_type": f"{float(row['isolation_rank_pct_ship_type']):.6f}",
+            "lof_score": f"{float(row['lof_score']):.6f}",
+            "lof_rank_pct_ship_type": f"{float(row['lof_rank_pct_ship_type']):.6f}",
+            "predicted_co2_per_distance_kg_nm": f"{float(row['predicted_co2_per_distance_kg_nm']):.6f}",
+            "residual_signed_log": f"{float(row['residual_signed_log']):.6f}",
+            "residual_abs_z": f"{float(row['residual_abs_z']):.6f}",
+            "residual_rank_pct_ship_type": f"{float(row['residual_rank_pct_ship_type']):.6f}",
+            "consensus_score": f"{float(row['consensus_score']):.6f}",
+            "consensus_rank_pct_global": f"{float(row['consensus_rank_pct_global']):.6f}",
+            "method_flags_count": str(int(row["method_flags_count"])),
+            "isolation_top2pct": str(row["isolation_top2pct"]).lower(),
+            "lof_top2pct": str(row["lof_top2pct"]).lower(),
+            "residual_top2pct": str(row["residual_top2pct"]).lower(),
+            "dominant_deviation_fields": row["dominant_deviation_fields"],
+            "screening_explanation": row["screening_explanation"],
+        }
+        if include_identity:
+            item = {
+                "candidate_rank": item["candidate_rank"],
                 "imo_number": row["imo_number"],
                 "ship_name": row["ship_name"],
-                "technical_efficiency_type": row["technical_efficiency_type"],
-                "technical_efficiency_value": row["technical_efficiency_value"],
-                "total_fuel_consumption_mt": row["total_fuel_consumption_mt"],
-                "fuel_per_distance_kg_nm": row["fuel_per_distance_kg_nm"],
-                "total_co2_emissions_mt": row["total_co2_emissions_mt"],
-                "co2_per_distance_kg_nm": row["co2_per_distance_kg_nm"],
-                "time_spent_at_sea_hours": row["time_spent_at_sea_hours"],
-                "efficiency_label_distance": row["efficiency_label_distance"],
-                "distance_efficiency_rank_pct": row["distance_efficiency_rank_pct"],
-                "isolation_score": f"{float(row['isolation_score']):.6f}",
-                "isolation_rank_pct_ship_type": f"{float(row['isolation_rank_pct_ship_type']):.6f}",
-                "lof_score": f"{float(row['lof_score']):.6f}",
-                "lof_rank_pct_ship_type": f"{float(row['lof_rank_pct_ship_type']):.6f}",
-                "predicted_co2_per_distance_kg_nm": f"{float(row['predicted_co2_per_distance_kg_nm']):.6f}",
-                "residual_signed_log": f"{float(row['residual_signed_log']):.6f}",
-                "residual_abs_z": f"{float(row['residual_abs_z']):.6f}",
-                "residual_rank_pct_ship_type": f"{float(row['residual_rank_pct_ship_type']):.6f}",
-                "consensus_score": f"{float(row['consensus_score']):.6f}",
-                "consensus_rank_pct_global": f"{float(row['consensus_rank_pct_global']):.6f}",
-                "method_flags_count": str(int(row["method_flags_count"])),
-                "isolation_top2pct": str(row["isolation_top2pct"]).lower(),
-                "lof_top2pct": str(row["lof_top2pct"]).lower(),
-                "residual_top2pct": str(row["residual_top2pct"]).lower(),
-                "dominant_deviation_fields": row["dominant_deviation_fields"],
-                "screening_explanation": row["screening_explanation"],
+                **{key: value for key, value in item.items() if key != "candidate_rank"},
             }
-        )
+        formatted.append(item)
     return formatted
 
 
@@ -417,8 +422,8 @@ def paper_results_index_rows() -> list[dict[str, str]]:
         {
             "result_block": "anomaly_screening",
             "artifact": "reports/tables/mrv_anomaly_top_candidates.csv",
-            "primary_use": "Top MRV consistency-screening candidates",
-            "notes": "Describe strictly as anomaly-screening candidates, not violations.",
+            "primary_use": "Anonymized top MRV consistency-screening candidates",
+            "notes": "Describe strictly as anomaly-screening candidates, not violations; public table excludes IMO numbers and ship names.",
         },
         {
             "result_block": "anomaly_figures",
@@ -557,7 +562,7 @@ def main() -> None:
         row["consensus_rank_pct_global"] = pct
 
     scored.sort(key=lambda row: float(row["consensus_score"]), reverse=True)
-    formatted_all = format_scored_rows(scored)
+    formatted_all = format_scored_rows(scored, include_identity=True)
     formatted_top = format_scored_rows(scored[:TOP_CANDIDATES])
     overlaps = method_overlap_rows(scored)
     ship_counts = ship_type_candidate_counts(scored)

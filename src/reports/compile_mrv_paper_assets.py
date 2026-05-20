@@ -100,6 +100,47 @@ def build_main_model_results() -> list[dict[str, str]]:
     return rows
 
 
+def build_class_metrics() -> list[dict[str, str]]:
+    labels = ["efficient", "medium", "inefficient"]
+    matrices = read_csv(TABLE_DIR / "mrv_baseline_confusion_matrices.csv")
+    selected_splits = ["validation_2022", "test_2023", "external_2024"]
+    out = []
+    for split in selected_splits:
+        rows = [
+            row
+            for row in matrices
+            if row["scenario"] == "temporal"
+            and row["feature_set"] == "operational_no_emission"
+            and row["model"] == "hist_gradient_boosting"
+            and row["split"] == split
+        ]
+        matrix = {
+            row["actual_label"]: {label: int(row[f"pred_{label}"]) for label in labels}
+            for row in rows
+        }
+        for label in labels:
+            true_positive = matrix[label][label]
+            support = sum(matrix[label].values())
+            predicted = sum(matrix[actual][label] for actual in labels)
+            precision = true_positive / predicted if predicted else 0.0
+            recall = true_positive / support if support else 0.0
+            f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
+            out.append(
+                {
+                    "split": split,
+                    "feature_set": "operational_no_emission",
+                    "model": "hist_gradient_boosting",
+                    "class_label": label,
+                    "precision": f"{precision:.6f}",
+                    "recall": f"{recall:.6f}",
+                    "f1": f"{f1:.6f}",
+                    "support": str(support),
+                    "predicted_rows": str(predicted),
+                }
+            )
+    return out
+
+
 def recommended_model_use(row: dict[str, str]) -> str:
     if row["scenario"] == "temporal" and row["split"] == "test_2023":
         return "main temporal generalization result"
@@ -205,6 +246,13 @@ def build_table_plan() -> list[dict[str, str]]:
             "section": "Consistency screening",
             "status": "ready",
         },
+        {
+            "table_id": "Supplementary Table S1",
+            "artifact": "reports/tables/mrv_paper_class_metrics.csv",
+            "caption": "Class-level precision, recall, F1, support, and predicted-row counts for the best temporal classifier.",
+            "section": "Main results",
+            "status": "ready for supplementary release or condensed in text",
+        },
     ]
 
 
@@ -290,6 +338,12 @@ def build_results_index() -> list[dict[str, str]]:
             "notes": "Use temporal 2023 results as the primary predictive benchmark.",
         },
         {
+            "result_block": "class_level_metrics",
+            "artifact": "reports/tables/mrv_paper_class_metrics.csv",
+            "primary_use": "Class-level behavior of the best temporal classifier",
+            "notes": "Supports text on medium-class ambiguity and asymmetric efficient/inefficient recall.",
+        },
+        {
             "result_block": "baseline_figures",
             "artifact": "reports/figures/mrv_baseline_macro_f1_temporal_test.svg",
             "primary_use": "Visual comparison of model Macro-F1 on 2023 temporal test",
@@ -310,8 +364,8 @@ def build_results_index() -> list[dict[str, str]]:
         {
             "result_block": "anomaly_screening",
             "artifact": "reports/tables/mrv_anomaly_top_candidates.csv",
-            "primary_use": "Top MRV consistency-screening candidates",
-            "notes": "Describe strictly as anomaly-screening candidates, not violations.",
+            "primary_use": "Anonymized top MRV consistency-screening candidates",
+            "notes": "Describe strictly as anomaly-screening candidates, not violations; public table excludes IMO numbers and ship names.",
         },
         {
             "result_block": "anomaly_sensitivity",
@@ -326,40 +380,10 @@ def build_results_index() -> list[dict[str, str]]:
             "notes": "Use for final figure list and caption polishing.",
         },
         {
-            "result_block": "methods_draft",
-            "artifact": "manuscript/methods_draft.md",
-            "primary_use": "Initial Methods section draft",
-            "notes": "Needs references and final journal formatting.",
-        },
-        {
-            "result_block": "experiments_draft",
-            "artifact": "manuscript/experiments_draft.md",
-            "primary_use": "Initial Experiments and Results draft",
-            "notes": "Needs final tables inserted after journal selection.",
-        },
-        {
-            "result_block": "target_journals",
-            "artifact": "reports/target_journals.md",
-            "primary_use": "Initial journal targeting plan",
-            "notes": "Re-check JCR and CAS partition immediately before submission.",
-        },
-        {
-            "result_block": "jmse_submission_plan",
-            "artifact": "manuscript/jmse_submission_plan.md",
-            "primary_use": "Week-7 JMSE structure and submission-preparation plan",
-            "notes": "Based on JMSE Instructions for Authors checked on 2026-05-20.",
-        },
-        {
             "result_block": "references",
             "artifact": "references/mrv_effscreen_refs.bib",
             "primary_use": "BibTeX seed file for official, MRV, ML, and anomaly-detection references",
             "notes": "Needs final Zotero/EndNote verification before submission.",
-        },
-        {
-            "result_block": "chinese_review_pdf",
-            "artifact": "output/pdf/MRV-EffScreen_zh_v0.2.pdf",
-            "primary_use": "Current Chinese review manuscript PDF",
-            "notes": "Latest review copy also available at output/pdf/MRV-EffScreen_zh_latest.pdf.",
         },
     ]
 
@@ -367,6 +391,7 @@ def build_results_index() -> list[dict[str, str]]:
 def main() -> None:
     write_csv(TABLE_DIR / "mrv_paper_key_numbers.csv", build_key_numbers())
     write_csv(TABLE_DIR / "mrv_paper_main_model_results.csv", build_main_model_results())
+    write_csv(TABLE_DIR / "mrv_paper_class_metrics.csv", build_class_metrics())
     write_csv(TABLE_DIR / "mrv_paper_ship_type_results.csv", build_ship_type_results())
     write_csv(TABLE_DIR / "mrv_paper_interpretability_results.csv", build_interpretability_results())
     write_csv(TABLE_DIR / "mrv_paper_table_plan.csv", build_table_plan())
