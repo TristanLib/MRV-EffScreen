@@ -1,0 +1,7 @@
+reporting_year,temporal_split,rows,labeled_rows,unlabeled_rows,label_coverage_pct,ship_type_year_groups,below_threshold_groups,below_threshold_target_rows,missing_target_rows
+2018,train,12260,11610,650,0.946982,15,1,10,640
+2019,train,12420,12070,350,0.971820,15,1,11,339
+2020,train,12115,11718,397,0.967231,15,1,16,381
+2021,train,12483,11982,501,0.959865,15,1,6,495
+2022,holdout_2022,13474,13050,424,0.968532,15,1,9,415
+2023,test_2023,12828,12615,213,0.983396,16,2,17,196

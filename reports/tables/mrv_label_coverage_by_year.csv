@@ -1,0 +1,9 @@
+reporting_year,report_scope,temporal_split,rows,labeled_rows,unlabeled_rows,label_coverage_pct
+2018,annual_er,train,12260,11610,650,0.946982
+2019,annual_er,train,12420,12070,350,0.971820
+2020,annual_er,train,12115,11718,397,0.967231
+2021,annual_er,train,12483,11982,501,0.959865
+2022,annual_er,holdout_2022,13474,13050,424,0.968532
+2023,annual_er,test_2023,12828,12615,213,0.983396
+2024,full_er,external_2024,14139,12905,1234,0.912724
+2024,partial_er,excluded_partial_2024,1026,933,93,0.909357

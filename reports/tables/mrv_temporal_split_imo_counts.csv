@@ -1,0 +1,5 @@
+temporal_split,display_name,labeled_rows,unique_imo_numbers,rows_without_imo
+train,Train 2018-2021,47380,17873,0
+holdout_2022,Holdout 2022,13050,13050,0
+test_2023,Test 2023,12615,12615,0
+external_2024,External 2024,12905,12905,0

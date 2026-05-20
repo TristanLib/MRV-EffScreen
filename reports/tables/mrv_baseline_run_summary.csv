@@ -1,8 +1,8 @@
 metric,value
 labeled_main_rows,73045
 train_rows,47380
-validation_rows,13050
-test_rows,12615
+holdout_2022_rows,13050
+test_2023_rows,12615
 best_temporal_test_feature_set,operational_no_emission
 best_temporal_test_model,hist_gradient_boosting
 best_temporal_test_macro_f1,0.603196

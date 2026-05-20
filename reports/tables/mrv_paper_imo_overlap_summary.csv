@@ -1,0 +1,4 @@
+comparison,later_split,train_unique_imo,later_unique_imo,overlap_imo_numbers,overlap_pct_of_later_split
+Train 2018-2021 vs Holdout 2022,holdout_2022,17873,13050,11457,0.877931
+Train 2018-2021 vs Test 2023,test_2023,17873,12615,10439,0.827507
+Train 2018-2021 vs External 2024,external_2024,17873,12905,10029,0.777141

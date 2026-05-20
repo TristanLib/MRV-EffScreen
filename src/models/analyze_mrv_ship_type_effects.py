@@ -17,8 +17,11 @@ sys.path.append(str(Path(__file__).resolve().parent))
 
 from train_mrv_baselines import (  # noqa: E402
     FEATURE_SETS,
+    HOLDOUT_SPLIT,
     LABELS,
     LABEL_TO_INT,
+    TEST_SPLIT,
+    TRAIN_SPLIT,
     draw_bar_chart,
     evaluate,
     labeled_main_rows,
@@ -63,13 +66,13 @@ def run_ship_type_comparison(rows: list[dict[str, str]]) -> tuple[list[dict[str,
     matrices: list[dict[str, str]] = []
 
     for feature_set in ["strict_static", "operational_no_emission"]:
-        train_rows = [row for row in rows if row["temporal_split"] == "train"]
+        train_rows = [row for row in rows if row["temporal_split"] == TRAIN_SPLIT]
         x_train, y_train, numeric, categorical = make_xy(train_rows, feature_set)
         unified_model = make_model(MODEL_NAME, numeric, categorical)
         unified_model.fit(x_train, y_train)
 
         for ship_type in ships:
-            for split in ["validation", "test"]:
+            for split in [HOLDOUT_SPLIT, TEST_SPLIT]:
                 eval_rows = [
                     row
                     for row in rows
@@ -94,7 +97,7 @@ def run_ship_type_comparison(rows: list[dict[str, str]]) -> tuple[list[dict[str,
             ship_train_rows = [
                 row
                 for row in rows
-                if row["ship_type"] == ship_type and row["temporal_split"] == "train"
+                if row["ship_type"] == ship_type and row["temporal_split"] == TRAIN_SPLIT
             ]
             if len(ship_train_rows) < 300:
                 continue
@@ -105,7 +108,7 @@ def run_ship_type_comparison(rows: list[dict[str, str]]) -> tuple[list[dict[str,
             ship_model = make_model(MODEL_NAME, ship_numeric, ship_categorical)
             ship_model.fit(x_ship_train, y_ship_train)
 
-            for split in ["validation", "test"]:
+            for split in [HOLDOUT_SPLIT, TEST_SPLIT]:
                 eval_rows = [
                     row
                     for row in rows
@@ -131,8 +134,8 @@ def run_ship_type_comparison(rows: list[dict[str, str]]) -> tuple[list[dict[str,
 
 def run_permutation_importance(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     feature_set = "operational_no_emission"
-    train_rows = [row for row in rows if row["temporal_split"] == "train"]
-    test_rows = [row for row in rows if row["temporal_split"] == "test"]
+    train_rows = [row for row in rows if row["temporal_split"] == TRAIN_SPLIT]
+    test_rows = [row for row in rows if row["temporal_split"] == TEST_SPLIT]
     x_train, y_train, numeric, categorical = make_xy(train_rows, feature_set)
     x_test, y_test, _, _ = make_xy(test_rows, feature_set)
     features = numeric + categorical
@@ -186,8 +189,8 @@ def stratified_subset_indices(y: np.ndarray, max_n: int) -> np.ndarray:
 
 def run_medium_error_analysis(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     feature_set = "operational_no_emission"
-    train_rows = [row for row in rows if row["temporal_split"] == "train"]
-    test_rows = [row for row in rows if row["temporal_split"] == "test"]
+    train_rows = [row for row in rows if row["temporal_split"] == TRAIN_SPLIT]
+    test_rows = [row for row in rows if row["temporal_split"] == TEST_SPLIT]
     x_train, y_train, numeric, categorical = make_xy(train_rows, feature_set)
     x_test, y_test, _, _ = make_xy(test_rows, feature_set)
 
@@ -248,7 +251,7 @@ def run_medium_error_analysis(rows: list[dict[str, str]]) -> tuple[list[dict[str
 
 def make_figures(metrics: list[dict[str, str]], importance_rows: list[dict[str, str]]) -> None:
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
-    test_rows = [row for row in metrics if row["split"] == "test"]
+    test_rows = [row for row in metrics if row["split"] == TEST_SPLIT]
     labels = [
         f"{row['ship_type']} | {row['train_scope'].replace('_model', '')} | {row['feature_set'].replace('_', ' ')}"
         for row in test_rows
@@ -299,7 +302,7 @@ def make_figures(metrics: list[dict[str, str]], importance_rows: list[dict[str, 
 
 
 def write_summary(metrics: list[dict[str, str]], ships: list[str], importance_rows: list[dict[str, str]]) -> None:
-    test_rows = [row for row in metrics if row["split"] == "test"]
+    test_rows = [row for row in metrics if row["split"] == TEST_SPLIT]
     best = max(test_rows, key=lambda row: float(row["macro_f1"]))
     rows = [
         {"metric": "top_ship_types", "value": "; ".join(ships)},
@@ -321,7 +324,7 @@ def write_summary(metrics: list[dict[str, str]], ships: list[str], importance_ro
 
 
 def write_comparison_summary(metrics: list[dict[str, str]]) -> None:
-    test_rows = [row for row in metrics if row["split"] == "test"]
+    test_rows = [row for row in metrics if row["split"] == TEST_SPLIT]
     keyed = {
         (row["ship_type"], row["feature_set"], row["train_scope"]): row
         for row in test_rows

@@ -1,41 +1,41 @@
 train_scope,ship_type,scenario,feature_set,model,split,rows,accuracy,balanced_accuracy,macro_f1,weighted_f1,recall_efficient,recall_medium,recall_inefficient
-unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,validation,4071,0.630066,0.630066,0.627173,0.627173,0.673545,0.487841,0.728814
-unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,test,3670,0.583106,0.583077,0.582912,0.582937,0.691176,0.622240,0.435814
-unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,validation,2005,0.741646,0.741588,0.739256,0.739304,0.857997,0.609281,0.757485
-unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,test,1921,0.678293,0.678183,0.671003,0.671086,0.889236,0.690625,0.454688
-unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,validation,1854,0.753506,0.753506,0.754870,0.754870,0.752427,0.705502,0.802589
-unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,test,1923,0.635465,0.635465,0.608882,0.608882,0.683307,0.294852,0.928237
-unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,validation,1435,0.650871,0.650763,0.645972,0.646042,0.805846,0.487448,0.658996
-unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,test,1354,0.587888,0.587676,0.570585,0.570713,0.873894,0.547672,0.341463
-unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,validation,1209,0.682382,0.682382,0.674900,0.674900,0.739454,0.483871,0.823821
-unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,test,1200,0.620000,0.620000,0.598364,0.598364,0.757500,0.302500,0.800000
-ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,validation,4071,0.627856,0.627856,0.626173,0.626173,0.660280,0.499632,0.723655
-ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,test,3670,0.577112,0.577088,0.579009,0.579031,0.664216,0.591987,0.475061
-ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,2005,0.747631,0.747589,0.747216,0.747263,0.832586,0.634731,0.775449
-ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,test,1921,0.689224,0.689133,0.686842,0.686912,0.864275,0.639062,0.564063
-ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,validation,1854,0.795577,0.795577,0.796690,0.796690,0.800971,0.747573,0.838188
-ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,test,1923,0.654186,0.654186,0.645957,0.645957,0.730109,0.422777,0.809672
-ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,1435,0.664111,0.664056,0.663981,0.664034,0.743215,0.566946,0.682008
-ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,test,1354,0.575332,0.575156,0.567639,0.567773,0.814159,0.523282,0.388027
-ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,validation,1209,0.757651,0.757651,0.755497,0.755497,0.794045,0.627792,0.851117
-ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,test,1200,0.650000,0.650000,0.644408,0.644408,0.762500,0.465000,0.722500
-unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,validation,4071,0.629329,0.629329,0.625609,0.625609,0.681651,0.476787,0.729550
-unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,test,3670,0.589101,0.589071,0.590181,0.590204,0.698529,0.584628,0.484056
-unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,2005,0.733666,0.733602,0.730145,0.730194,0.860987,0.585329,0.754491
-unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,1921,0.680895,0.680790,0.674432,0.674509,0.882995,0.685937,0.473438
-unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,1854,0.749191,0.749191,0.750672,0.750672,0.749191,0.697411,0.800971
-unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,test,1923,0.642746,0.642746,0.622075,0.622075,0.658346,0.341654,0.928237
-unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,1435,0.651568,0.651466,0.647751,0.647819,0.797495,0.504184,0.652720
-unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,1354,0.583456,0.583247,0.566321,0.566453,0.867257,0.541020,0.341463
-unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,1209,0.671629,0.671629,0.665299,0.665299,0.722084,0.483871,0.808933
-unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,test,1200,0.607500,0.607500,0.592890,0.592890,0.710000,0.330000,0.782500
-ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,4071,0.631295,0.631295,0.629343,0.629343,0.655859,0.503316,0.734709
-ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,test,3670,0.585559,0.585534,0.587560,0.587583,0.677288,0.598528,0.480785
-ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,2005,0.744638,0.744592,0.743299,0.743348,0.838565,0.613772,0.781437
-ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,1921,0.683498,0.683410,0.682056,0.682128,0.853354,0.643750,0.553125
-ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,1854,0.771845,0.771845,0.773013,0.773013,0.796117,0.715210,0.804207
-ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,1923,0.625585,0.625585,0.616427,0.616427,0.692668,0.377535,0.806552
-ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,1435,0.665505,0.665450,0.664354,0.664414,0.745303,0.537657,0.713389
-ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,1354,0.589365,0.589204,0.583368,0.583487,0.807522,0.534368,0.425721
-ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,1209,0.727874,0.727874,0.724547,0.724547,0.751861,0.573201,0.858561
-ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,1200,0.637500,0.637500,0.626152,0.626152,0.757500,0.385000,0.770000
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,holdout_2022,4071,0.630066,0.630066,0.627173,0.627173,0.673545,0.487841,0.728814
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,test_2023,3670,0.583106,0.583077,0.582912,0.582937,0.691176,0.622240,0.435814
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,holdout_2022,2005,0.741646,0.741588,0.739256,0.739304,0.857997,0.609281,0.757485
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,test_2023,1921,0.678293,0.678183,0.671003,0.671086,0.889236,0.690625,0.454688
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,holdout_2022,1854,0.753506,0.753506,0.754870,0.754870,0.752427,0.705502,0.802589
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,test_2023,1923,0.635465,0.635465,0.608882,0.608882,0.683307,0.294852,0.928237
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,holdout_2022,1435,0.650871,0.650763,0.645972,0.646042,0.805846,0.487448,0.658996
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,test_2023,1354,0.587888,0.587676,0.570585,0.570713,0.873894,0.547672,0.341463
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,holdout_2022,1209,0.682382,0.682382,0.674900,0.674900,0.739454,0.483871,0.823821
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,test_2023,1200,0.620000,0.620000,0.598364,0.598364,0.757500,0.302500,0.800000
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,holdout_2022,4071,0.627856,0.627856,0.626173,0.626173,0.660280,0.499632,0.723655
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,test_2023,3670,0.577112,0.577088,0.579009,0.579031,0.664216,0.591987,0.475061
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,holdout_2022,2005,0.747631,0.747589,0.747216,0.747263,0.832586,0.634731,0.775449
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,test_2023,1921,0.689224,0.689133,0.686842,0.686912,0.864275,0.639062,0.564063
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,holdout_2022,1854,0.795577,0.795577,0.796690,0.796690,0.800971,0.747573,0.838188
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,test_2023,1923,0.654186,0.654186,0.645957,0.645957,0.730109,0.422777,0.809672
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,holdout_2022,1435,0.664111,0.664056,0.663981,0.664034,0.743215,0.566946,0.682008
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,test_2023,1354,0.575332,0.575156,0.567639,0.567773,0.814159,0.523282,0.388027
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,holdout_2022,1209,0.757651,0.757651,0.755497,0.755497,0.794045,0.627792,0.851117
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,test_2023,1200,0.650000,0.650000,0.644408,0.644408,0.762500,0.465000,0.722500
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,holdout_2022,4071,0.629329,0.629329,0.625609,0.625609,0.681651,0.476787,0.729550
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,test_2023,3670,0.589101,0.589071,0.590181,0.590204,0.698529,0.584628,0.484056
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,holdout_2022,2005,0.733666,0.733602,0.730145,0.730194,0.860987,0.585329,0.754491
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,test_2023,1921,0.680895,0.680790,0.674432,0.674509,0.882995,0.685937,0.473438
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,holdout_2022,1854,0.749191,0.749191,0.750672,0.750672,0.749191,0.697411,0.800971
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,test_2023,1923,0.642746,0.642746,0.622075,0.622075,0.658346,0.341654,0.928237
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,holdout_2022,1435,0.651568,0.651466,0.647751,0.647819,0.797495,0.504184,0.652720
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,test_2023,1354,0.583456,0.583247,0.566321,0.566453,0.867257,0.541020,0.341463
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,holdout_2022,1209,0.671629,0.671629,0.665299,0.665299,0.722084,0.483871,0.808933
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,test_2023,1200,0.607500,0.607500,0.592890,0.592890,0.710000,0.330000,0.782500
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,holdout_2022,4071,0.631295,0.631295,0.629343,0.629343,0.655859,0.503316,0.734709
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,test_2023,3670,0.585559,0.585534,0.587560,0.587583,0.677288,0.598528,0.480785
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,holdout_2022,2005,0.744638,0.744592,0.743299,0.743348,0.838565,0.613772,0.781437
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test_2023,1921,0.683498,0.683410,0.682056,0.682128,0.853354,0.643750,0.553125
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,holdout_2022,1854,0.771845,0.771845,0.773013,0.773013,0.796117,0.715210,0.804207
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test_2023,1923,0.625585,0.625585,0.616427,0.616427,0.692668,0.377535,0.806552
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,holdout_2022,1435,0.665505,0.665450,0.664354,0.664414,0.745303,0.537657,0.713389
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test_2023,1354,0.589365,0.589204,0.583368,0.583487,0.807522,0.534368,0.425721
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,holdout_2022,1209,0.727874,0.727874,0.724547,0.724547,0.751861,0.573201,0.858561
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test_2023,1200,0.637500,0.637500,0.626152,0.626152,0.757500,0.385000,0.770000

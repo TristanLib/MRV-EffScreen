@@ -2,6 +2,12 @@ metric,value
 total_rows,90745
 main_experiment_rows,75580
 labeled_main_experiment_rows,73045
+unlabeled_main_experiment_rows,2535
+labeling_min_ship_type_year_rows,30
+main_ship_type_year_groups,91
+main_below_threshold_groups,7
+main_below_threshold_target_rows,69
+main_missing_target_rows,2466
 external_2024_rows,14139
 partial_er_rows,1026
 unique_imo_numbers,22551

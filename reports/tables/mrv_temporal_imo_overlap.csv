@@ -1,0 +1,7 @@
+split_a,split_b,display_pair,unique_imo_a,unique_imo_b,overlap_imo_numbers,overlap_pct_of_a,overlap_pct_of_b
+train,holdout_2022,Train 2018-2021 vs Holdout 2022,17873,13050,11457,0.641023,0.877931
+train,test_2023,Train 2018-2021 vs Test 2023,17873,12615,10439,0.584065,0.827507
+train,external_2024,Train 2018-2021 vs External 2024,17873,12905,10029,0.561126,0.777141
+holdout_2022,test_2023,Holdout 2022 vs Test 2023,13050,12615,9754,0.747433,0.773207
+holdout_2022,external_2024,Holdout 2022 vs External 2024,13050,12905,8977,0.687893,0.695622
+test_2023,external_2024,Test 2023 vs External 2024,12615,12905,9683,0.767578,0.750329

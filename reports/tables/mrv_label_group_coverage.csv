@@ -1,0 +1,124 @@
+reporting_year,report_scope,temporal_split,ship_type,rows,target_non_missing_rows,labeled_rows,unlabeled_rows,missing_target_rows,below_threshold_target_rows,labeling_status
+2018,annual_er,train,Bulk carrier,3846,3479,3479,367,367,0,labeled
+2018,annual_er,train,Chemical tanker,1364,1324,1324,40,40,0,labeled
+2018,annual_er,train,Combination carrier,10,10,0,10,0,10,below_min_target_rows
+2018,annual_er,train,Container ship,1813,1738,1738,75,75,0,labeled
+2018,annual_er,train,Container/ro-ro cargo ship,80,80,80,0,0,0,labeled
+2018,annual_er,train,Gas carrier,321,309,309,12,12,0,labeled
+2018,annual_er,train,General cargo ship,1178,1156,1156,22,22,0,labeled
+2018,annual_er,train,LNG carrier,213,209,209,4,4,0,labeled
+2018,annual_er,train,Oil tanker,1909,1817,1817,92,92,0,labeled
+2018,annual_er,train,Other ship types,126,115,115,11,11,0,labeled
+2018,annual_er,train,Passenger ship,159,155,155,4,4,0,labeled
+2018,annual_er,train,Refrigerated cargo carrier,146,141,141,5,5,0,labeled
+2018,annual_er,train,Ro-pax ship,375,374,374,1,1,0,labeled
+2018,annual_er,train,Ro-ro ship,272,272,272,0,0,0,labeled
+2018,annual_er,train,Vehicle carrier,448,441,441,7,7,0,labeled
+2019,annual_er,train,Bulk carrier,3675,3460,3460,215,215,0,labeled
+2019,annual_er,train,Chemical tanker,1363,1349,1349,14,14,0,labeled
+2019,annual_er,train,Combination carrier,11,11,0,11,0,11,below_min_target_rows
+2019,annual_er,train,Container ship,1852,1816,1816,36,36,0,labeled
+2019,annual_er,train,Container/ro-ro cargo ship,76,76,76,0,0,0,labeled
+2019,annual_er,train,Gas carrier,343,341,341,2,2,0,labeled
+2019,annual_er,train,General cargo ship,1247,1232,1232,15,15,0,labeled
+2019,annual_er,train,LNG carrier,257,257,257,0,0,0,labeled
+2019,annual_er,train,Oil tanker,2007,1961,1961,46,46,0,labeled
+2019,annual_er,train,Other ship types,142,134,134,8,8,0,labeled
+2019,annual_er,train,Passenger ship,179,179,179,0,0,0,labeled
+2019,annual_er,train,Refrigerated cargo carrier,152,152,152,0,0,0,labeled
+2019,annual_er,train,Ro-pax ship,404,403,403,1,1,0,labeled
+2019,annual_er,train,Ro-ro ship,277,277,277,0,0,0,labeled
+2019,annual_er,train,Vehicle carrier,435,433,433,2,2,0,labeled
+2020,annual_er,train,Bulk carrier,3504,3236,3236,268,268,0,labeled
+2020,annual_er,train,Chemical tanker,1354,1339,1339,15,15,0,labeled
+2020,annual_er,train,Combination carrier,16,16,0,16,0,16,below_min_target_rows
+2020,annual_er,train,Container ship,1859,1827,1827,32,32,0,labeled
+2020,annual_er,train,Container/ro-ro cargo ship,70,70,70,0,0,0,labeled
+2020,annual_er,train,Gas carrier,347,345,345,2,2,0,labeled
+2020,annual_er,train,General cargo ship,1247,1226,1226,21,21,0,labeled
+2020,annual_er,train,LNG carrier,278,277,277,1,1,0,labeled
+2020,annual_er,train,Oil tanker,1936,1920,1920,16,16,0,labeled
+2020,annual_er,train,Other ship types,138,126,126,12,12,0,labeled
+2020,annual_er,train,Passenger ship,111,105,105,6,6,0,labeled
+2020,annual_er,train,Refrigerated cargo carrier,152,152,152,0,0,0,labeled
+2020,annual_er,train,Ro-pax ship,399,394,394,5,5,0,labeled
+2020,annual_er,train,Ro-ro ship,245,244,244,1,1,0,labeled
+2020,annual_er,train,Vehicle carrier,459,457,457,2,2,0,labeled
+2021,annual_er,train,Bulk carrier,3841,3552,3552,289,289,0,labeled
+2021,annual_er,train,Chemical tanker,1400,1366,1366,34,34,0,labeled
+2021,annual_er,train,Combination carrier,6,6,0,6,0,6,below_min_target_rows
+2021,annual_er,train,Container ship,1859,1805,1805,54,54,0,labeled
+2021,annual_er,train,Container/ro-ro cargo ship,64,64,64,0,0,0,labeled
+2021,annual_er,train,Gas carrier,353,330,330,23,23,0,labeled
+2021,annual_er,train,General cargo ship,1262,1239,1239,23,23,0,labeled
+2021,annual_er,train,LNG carrier,300,298,298,2,2,0,labeled
+2021,annual_er,train,Oil tanker,1876,1835,1835,41,41,0,labeled
+2021,annual_er,train,Other ship types,164,145,145,19,19,0,labeled
+2021,annual_er,train,Passenger ship,112,111,111,1,1,0,labeled
+2021,annual_er,train,Refrigerated cargo carrier,160,160,160,0,0,0,labeled
+2021,annual_er,train,Ro-pax ship,392,388,388,4,4,0,labeled
+2021,annual_er,train,Ro-ro ship,225,223,223,2,2,0,labeled
+2021,annual_er,train,Vehicle carrier,469,466,466,3,3,0,labeled
+2022,annual_er,holdout_2022,Bulk carrier,4264,4071,4071,193,193,0,labeled
+2022,annual_er,holdout_2022,Chemical tanker,1473,1435,1435,38,38,0,labeled
+2022,annual_er,holdout_2022,Combination carrier,9,9,0,9,0,9,below_min_target_rows
+2022,annual_er,holdout_2022,Container ship,1906,1854,1854,52,52,0,labeled
+2022,annual_er,holdout_2022,Container/ro-ro cargo ship,60,60,60,0,0,0,labeled
+2022,annual_er,holdout_2022,Gas carrier,376,355,355,21,21,0,labeled
+2022,annual_er,holdout_2022,General cargo ship,1251,1209,1209,42,42,0,labeled
+2022,annual_er,holdout_2022,LNG carrier,390,390,390,0,0,0,labeled
+2022,annual_er,holdout_2022,Oil tanker,2038,2005,2005,33,33,0,labeled
+2022,annual_er,holdout_2022,Other ship types,257,224,224,33,33,0,labeled
+2022,annual_er,holdout_2022,Passenger ship,191,191,191,0,0,0,labeled
+2022,annual_er,holdout_2022,Refrigerated cargo carrier,145,145,145,0,0,0,labeled
+2022,annual_er,holdout_2022,Ro-pax ship,413,412,412,1,1,0,labeled
+2022,annual_er,holdout_2022,Ro-ro ship,229,228,228,1,1,0,labeled
+2022,annual_er,holdout_2022,Vehicle carrier,472,471,471,1,1,0,labeled
+2023,annual_er,test_2023,Bulk carrier,3796,3670,3670,126,126,0,labeled
+2023,annual_er,test_2023,Chemical tanker,1355,1354,1354,1,1,0,labeled
+2023,annual_er,test_2023,Combination carrier,7,7,0,7,0,7,below_min_target_rows
+2023,annual_er,test_2023,Container ship,1927,1923,1923,4,4,0,labeled
+2023,annual_er,test_2023,Container/ro-ro cargo ship,63,63,63,0,0,0,labeled
+2023,annual_er,test_2023,Gas carrier,338,338,338,0,0,0,labeled
+2023,annual_er,test_2023,General cargo ship,1231,1200,1200,31,31,0,labeled
+2023,annual_er,test_2023,LNG carrier,371,370,370,1,1,0,labeled
+2023,annual_er,test_2023,Oil tanker,1928,1921,1921,7,7,0,labeled
+2023,annual_er,test_2023,Other ship types,367,344,344,23,23,0,labeled
+2023,annual_er,test_2023,Passenger ship,207,207,207,0,0,0,labeled
+2023,annual_er,test_2023,Passenger ship (Cruise Passenger ship),10,10,0,10,0,10,below_min_target_rows
+2023,annual_er,test_2023,Refrigerated cargo carrier,137,137,137,0,0,0,labeled
+2023,annual_er,test_2023,Ro-pax ship,404,402,402,2,2,0,labeled
+2023,annual_er,test_2023,Ro-ro ship,226,226,226,0,0,0,labeled
+2023,annual_er,test_2023,Vehicle carrier,461,460,460,1,1,0,labeled
+2024,full_er,external_2024,Bulk carrier,4479,3720,3720,759,759,0,labeled
+2024,full_er,external_2024,Chemical tanker,1455,1401,1401,54,54,0,labeled
+2024,full_er,external_2024,Combination carrier,10,10,0,10,0,10,below_min_target_rows
+2024,full_er,external_2024,Container ship,2159,2098,2098,61,61,0,labeled
+2024,full_er,external_2024,Container/ro-ro cargo ship,69,65,65,4,4,0,labeled
+2024,full_er,external_2024,Gas carrier,368,332,332,36,36,0,labeled
+2024,full_er,external_2024,General cargo ship,1365,1279,1279,86,86,0,labeled
+2024,full_er,external_2024,LNG carrier,355,351,351,4,4,0,labeled
+2024,full_er,external_2024,Oil tanker,1975,1854,1854,121,121,0,labeled
+2024,full_er,external_2024,Other ship types,416,373,373,43,43,0,labeled
+2024,full_er,external_2024,Other ship types (Offshore),6,6,0,6,0,6,below_min_target_rows
+2024,full_er,external_2024,Passenger ship,211,207,207,4,4,0,labeled
+2024,full_er,external_2024,Passenger ship (Cruise Passenger ship),18,18,0,18,0,18,below_min_target_rows
+2024,full_er,external_2024,Refrigerated cargo carrier,132,118,118,14,14,0,labeled
+2024,full_er,external_2024,Ro-pax ship,424,419,419,5,5,0,labeled
+2024,full_er,external_2024,Ro-ro ship,228,226,226,2,2,0,labeled
+2024,full_er,external_2024,Vehicle carrier,469,462,462,7,7,0,labeled
+2024,partial_er,excluded_partial_2024,Bulk carrier,356,313,313,43,43,0,labeled
+2024,partial_er,excluded_partial_2024,Chemical tanker,117,107,107,10,10,0,labeled
+2024,partial_er,excluded_partial_2024,Combination carrier,1,1,0,1,0,1,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Container ship,125,120,120,5,5,0,labeled
+2024,partial_er,excluded_partial_2024,Container/ro-ro cargo ship,2,2,2,0,0,2,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Gas carrier,27,26,26,1,1,26,below_min_target_rows
+2024,partial_er,excluded_partial_2024,General cargo ship,74,71,71,3,3,0,labeled
+2024,partial_er,excluded_partial_2024,LNG carrier,20,19,19,1,1,19,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Oil tanker,189,171,171,18,18,0,labeled
+2024,partial_er,excluded_partial_2024,Other ship types,26,24,24,2,2,24,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Passenger ship,7,4,4,3,3,4,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Refrigerated cargo carrier,7,7,7,0,0,7,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Ro-pax ship,28,28,28,0,0,28,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Ro-ro ship,22,22,22,0,0,22,below_min_target_rows
+2024,partial_er,excluded_partial_2024,Vehicle carrier,25,19,19,6,6,19,below_min_target_rows

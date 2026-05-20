@@ -6,6 +6,8 @@ Outputs:
 - data/processed/mrv_modeling_base.csv
 - reports/tables/mrv_processed_missingness.csv
 - reports/tables/mrv_label_distribution.csv
+- reports/tables/mrv_label_coverage_by_year.csv
+- reports/tables/mrv_label_group_coverage.csv
 - reports/tables/mrv_year_scope_counts.csv
 - reports/tables/mrv_processed_summary.csv
 - reports/figures/*.svg
@@ -31,6 +33,7 @@ INTERIM_DIR = ROOT / "data" / "interim"
 PROCESSED_DIR = ROOT / "data" / "processed"
 TABLE_DIR = ROOT / "reports" / "tables"
 FIGURE_DIR = ROOT / "reports" / "figures"
+LABEL_GROUP_MIN_ROWS = 30
 
 
 PROCESSED_FIELDS = [
@@ -339,9 +342,9 @@ def temporal_split(year: int | None, scope: str) -> str:
     if year in {2018, 2019, 2020, 2021}:
         return "train"
     if year == 2022:
-        return "validation"
+        return "holdout_2022"
     if year == 2023:
-        return "test"
+        return "test_2023"
     return "excluded"
 
 
@@ -442,7 +445,7 @@ def add_distance_efficiency_labels(rows: list[dict[str, str]]) -> None:
     for group_rows in groups.values():
         group_rows.sort(key=lambda item: item[1])
         n = len(group_rows)
-        if n < 30:
+        if n < LABEL_GROUP_MIN_ROWS:
             continue
         for rank, (idx, _value) in enumerate(group_rows):
             pct = (rank + 1) / n
@@ -538,6 +541,78 @@ def build_label_distribution(rows: list[dict[str, str]]) -> list[dict[str, str]]
     ]
 
 
+def build_label_group_coverage(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    groups: dict[tuple[str, str, str, str], dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for row in rows:
+        year = row.get("reporting_year", "")
+        ship_type = row.get("ship_type", "")
+        if not year or not ship_type:
+            continue
+        key = (year, row.get("report_scope", ""), row.get("temporal_split", ""), ship_type)
+        groups[key]["rows"] += 1
+        if parse_float(row.get("co2_per_distance_kg_nm")) is not None:
+            groups[key]["target_non_missing_rows"] += 1
+        if row.get("efficiency_label_distance"):
+            groups[key]["labeled_rows"] += 1
+
+    out = []
+    for (year, scope, split, ship_type), counts in sorted(groups.items()):
+        rows_total = counts["rows"]
+        target_rows = counts["target_non_missing_rows"]
+        labeled_rows = counts["labeled_rows"]
+        missing_target_rows = rows_total - target_rows
+        below_threshold_rows = target_rows if 0 < target_rows < LABEL_GROUP_MIN_ROWS else 0
+        if target_rows >= LABEL_GROUP_MIN_ROWS and labeled_rows == target_rows:
+            status = "labeled"
+        elif target_rows >= LABEL_GROUP_MIN_ROWS:
+            status = "partially_unlabeled_missing_target"
+        elif target_rows > 0:
+            status = "below_min_target_rows"
+        else:
+            status = "no_target_values"
+        out.append(
+            {
+                "reporting_year": year,
+                "report_scope": scope,
+                "temporal_split": split,
+                "ship_type": ship_type,
+                "rows": str(rows_total),
+                "target_non_missing_rows": str(target_rows),
+                "labeled_rows": str(labeled_rows),
+                "unlabeled_rows": str(rows_total - labeled_rows),
+                "missing_target_rows": str(missing_target_rows),
+                "below_threshold_target_rows": str(below_threshold_rows),
+                "labeling_status": status,
+            }
+        )
+    return out
+
+
+def build_label_coverage_by_year(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    counter: dict[tuple[str, str, str], dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for row in rows:
+        key = (row.get("reporting_year", ""), row.get("report_scope", ""), row.get("temporal_split", ""))
+        counter[key]["rows"] += 1
+        if row.get("efficiency_label_distance"):
+            counter[key]["labeled_rows"] += 1
+    out = []
+    for (year, scope, split), counts in sorted(counter.items()):
+        total = counts["rows"]
+        labeled = counts["labeled_rows"]
+        out.append(
+            {
+                "reporting_year": year,
+                "report_scope": scope,
+                "temporal_split": split,
+                "rows": str(total),
+                "labeled_rows": str(labeled),
+                "unlabeled_rows": str(total - labeled),
+                "label_coverage_pct": f"{labeled / total:.6f}" if total else "0.000000",
+            }
+        )
+    return out
+
+
 def build_year_scope_counts(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     counter = Counter((row["reporting_year"], row["report_scope"], row["temporal_split"]) for row in rows)
     return [
@@ -557,15 +632,34 @@ def build_summary(rows: list[dict[str, str]]) -> list[dict[str, str]]:
         for row in rows
         if row["is_main_experiment"] == "true" and row["efficiency_label_distance"]
     ]
+    main_rows = [row for row in rows if row["is_main_experiment"] == "true"]
+    main_unlabeled = [row for row in main_rows if not row["efficiency_label_distance"]]
+    group_coverage = build_label_group_coverage(rows)
+    main_groups = [
+        row
+        for row in group_coverage
+        if row["report_scope"] == "annual_er"
+        and row["reporting_year"] in {"2018", "2019", "2020", "2021", "2022", "2023"}
+    ]
+    below_threshold_groups = [row for row in main_groups if row["labeling_status"] == "below_min_target_rows"]
     values = [parse_float(row["co2_per_distance_kg_nm"]) for row in labeled_main]
     values = [value for value in values if value is not None]
     return [
         {"metric": "total_rows", "value": str(len(rows))},
-        {
-            "metric": "main_experiment_rows",
-            "value": str(sum(1 for row in rows if row["is_main_experiment"] == "true")),
-        },
+        {"metric": "main_experiment_rows", "value": str(len(main_rows))},
         {"metric": "labeled_main_experiment_rows", "value": str(len(labeled_main))},
+        {"metric": "unlabeled_main_experiment_rows", "value": str(len(main_unlabeled))},
+        {"metric": "labeling_min_ship_type_year_rows", "value": str(LABEL_GROUP_MIN_ROWS)},
+        {"metric": "main_ship_type_year_groups", "value": str(len(main_groups))},
+        {"metric": "main_below_threshold_groups", "value": str(len(below_threshold_groups))},
+        {
+            "metric": "main_below_threshold_target_rows",
+            "value": str(sum(int(row["below_threshold_target_rows"]) for row in below_threshold_groups)),
+        },
+        {
+            "metric": "main_missing_target_rows",
+            "value": str(sum(int(row["missing_target_rows"]) for row in main_groups)),
+        },
         {
             "metric": "external_2024_rows",
             "value": str(sum(1 for row in rows if row["temporal_split"] == "external_2024")),
@@ -620,6 +714,19 @@ def make_figures(rows: list[dict[str, str]]) -> None:
         width=1100,
         height=560,
         rotate_labels=True,
+    )
+
+    coverage_data = []
+    for row in build_label_coverage_by_year(rows):
+        if row["report_scope"] == "annual_er" and row["reporting_year"] in {"2018", "2019", "2020", "2021", "2022", "2023"}:
+            coverage_data.append(FigureDatum(row["reporting_year"], float(row["label_coverage_pct"])))
+    draw_bar_chart(
+        FIGURE_DIR / "mrv_label_coverage_by_year.svg",
+        coverage_data,
+        "Label coverage by reporting year",
+        "coverage fraction",
+        width=860,
+        height=460,
     )
 
     medians = []
@@ -723,6 +830,8 @@ def main() -> None:
     write_csv(PROCESSED_DIR / "mrv_modeling_base.csv", rows, PROCESSED_FIELDS)
     write_csv(TABLE_DIR / "mrv_processed_missingness.csv", build_missingness(rows))
     write_csv(TABLE_DIR / "mrv_label_distribution.csv", build_label_distribution(rows))
+    write_csv(TABLE_DIR / "mrv_label_coverage_by_year.csv", build_label_coverage_by_year(rows))
+    write_csv(TABLE_DIR / "mrv_label_group_coverage.csv", build_label_group_coverage(rows))
     write_csv(TABLE_DIR / "mrv_year_scope_counts.csv", build_year_scope_counts(rows))
     write_csv(TABLE_DIR / "mrv_processed_summary.csv", build_summary(rows))
     make_figures(rows)

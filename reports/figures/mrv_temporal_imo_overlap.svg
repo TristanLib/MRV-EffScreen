@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="380.0" y="30" text-anchor="middle" font-family="Arial" font-size="18" fill="#1f2933">Train-set IMO overlap with later-year splits</text>
+<text x="20" y="193.0" transform="rotate(-90 20 193.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#52606d">overlap fraction of later split</text>
+<line x1="80" y1="328" x2="730" y2="328" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="80" y1="58" x2="80" y2="328" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="76" y1="328.00" x2="730" y2="328.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="332.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.00</text>
+<line x1="76" y1="274.00" x2="730" y2="274.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="278.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.20</text>
+<line x1="76" y1="220.00" x2="730" y2="220.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="224.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.40</text>
+<line x1="76" y1="166.00" x2="730" y2="166.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="170.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.60</text>
+<line x1="76" y1="112.00" x2="730" y2="112.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="116.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.80</text>
+<line x1="76" y1="58.00" x2="730" y2="58.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="62.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">1.00</text>
+<rect x="80.00" y="90.96" width="194.00" height="237.04" fill="#2f6f73"/>
+<text x="177.00" y="84.96" text-anchor="middle" font-family="Arial" font-size="11" fill="#1f2933">0.878</text>
+<text x="177.00" y="352" text-anchor="middle" font-family="Arial" font-size="11" fill="#323f4b">holdout 2022</text>
+<rect x="308.00" y="104.57" width="194.00" height="223.43" fill="#4f6f9f"/>
+<text x="405.00" y="98.57" text-anchor="middle" font-family="Arial" font-size="11" fill="#1f2933">0.828</text>
+<text x="405.00" y="352" text-anchor="middle" font-family="Arial" font-size="11" fill="#323f4b">test 2023</text>
+<rect x="536.00" y="118.17" width="194.00" height="209.83" fill="#8f5f2a"/>
+<text x="633.00" y="112.17" text-anchor="middle" font-family="Arial" font-size="11" fill="#1f2933">0.777</text>
+<text x="633.00" y="352" text-anchor="middle" font-family="Arial" font-size="11" fill="#323f4b">external 2024</text>
+</svg>

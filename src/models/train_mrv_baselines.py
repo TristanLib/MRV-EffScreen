@@ -33,6 +33,10 @@ FIGURE_DIR = ROOT / "reports" / "figures"
 
 LABELS = ["efficient", "medium", "inefficient"]
 LABEL_TO_INT = {label: idx for idx, label in enumerate(LABELS)}
+TRAIN_SPLIT = "train"
+HOLDOUT_SPLIT = "holdout_2022"
+TEST_SPLIT = "test_2023"
+EXTERNAL_SPLIT = "external_2024"
 
 FEATURE_SETS = {
     "strict_static": {
@@ -99,7 +103,7 @@ def external_2024_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     return [
         row
         for row in rows
-        if row["temporal_split"] == "external_2024" and row["efficiency_label_distance"] in LABEL_TO_INT
+        if row["temporal_split"] == EXTERNAL_SPLIT and row["efficiency_label_distance"] in LABEL_TO_INT
     ]
 
 
@@ -279,14 +283,14 @@ def run_temporal_experiments(rows: list[dict[str, str]], all_rows: list[dict[str
     external_rows = external_2024_rows(all_rows)
 
     for feature_set in FEATURE_SETS:
-        train_rows = [row for row in rows if row["temporal_split"] == "train"]
-        validation_rows = [row for row in rows if row["temporal_split"] == "validation"]
-        test_rows = [row for row in rows if row["temporal_split"] == "test"]
+        train_rows = [row for row in rows if row["temporal_split"] == TRAIN_SPLIT]
+        holdout_rows = [row for row in rows if row["temporal_split"] == HOLDOUT_SPLIT]
+        test_rows = [row for row in rows if row["temporal_split"] == TEST_SPLIT]
         x_train, y_train, numeric, categorical = make_xy(train_rows, feature_set)
         eval_sets = [
-            ("validation_2022", validation_rows),
-            ("test_2023", test_rows),
-            ("external_2024", external_rows),
+            (HOLDOUT_SPLIT, holdout_rows),
+            (TEST_SPLIT, test_rows),
+            (EXTERNAL_SPLIT, external_rows),
         ]
 
         for model_name in ["logistic_regression", "random_forest", "hist_gradient_boosting"]:
@@ -547,9 +551,9 @@ def write_run_summary(rows: list[dict[str, str]], metrics: list[dict[str, str]])
     )
     summary_rows = [
         {"metric": "labeled_main_rows", "value": str(len(main))},
-        {"metric": "train_rows", "value": str(split_counts["train"])},
-        {"metric": "validation_rows", "value": str(split_counts["validation"])},
-        {"metric": "test_rows", "value": str(split_counts["test"])},
+        {"metric": "train_rows", "value": str(split_counts[TRAIN_SPLIT])},
+        {"metric": "holdout_2022_rows", "value": str(split_counts[HOLDOUT_SPLIT])},
+        {"metric": "test_2023_rows", "value": str(split_counts[TEST_SPLIT])},
         {"metric": "best_temporal_test_feature_set", "value": best_temporal["feature_set"]},
         {"metric": "best_temporal_test_model", "value": best_temporal["model"]},
         {"metric": "best_temporal_test_macro_f1", "value": best_temporal["macro_f1"]},

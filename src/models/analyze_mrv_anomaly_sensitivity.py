@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Week-6 sensitivity analysis for MRV anomaly-screening thresholds."""
+"""Week-6 sensitivity analysis for MRV consistency-review thresholds."""
 
 from __future__ import annotations
 
@@ -234,7 +234,7 @@ def make_figures(summary: list[dict[str, str]]) -> None:
         FIGURE_DIR / "mrv_anomaly_sensitivity_overlap.svg",
         labels,
         series,
-        "Anomaly-screening sensitivity across contamination thresholds",
+        "Consistency-review sensitivity across contamination thresholds",
         "candidate rows",
     )
 

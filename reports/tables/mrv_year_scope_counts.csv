@@ -3,7 +3,7 @@ reporting_year,report_scope,temporal_split,rows
 2019,annual_er,train,12420
 2020,annual_er,train,12115
 2021,annual_er,train,12483
-2022,annual_er,validation,13474
-2023,annual_er,test,12828
+2022,annual_er,holdout_2022,13474
+2023,annual_er,test_2023,12828
 2024,full_er,external_2024,14139
 2024,partial_er,excluded_partial_2024,1026

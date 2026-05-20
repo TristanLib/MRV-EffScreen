@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Week-5 anomaly screening for MRV consistency analysis."""
+"""Week-5 consistency-review screening for MRV consistency analysis."""
 
 from __future__ import annotations
 
@@ -422,8 +422,8 @@ def paper_results_index_rows() -> list[dict[str, str]]:
         {
             "result_block": "anomaly_screening",
             "artifact": "reports/tables/mrv_anomaly_top_candidates.csv",
-            "primary_use": "Identifier-removed top MRV consistency-screening candidates",
-            "notes": "Describe strictly as anomaly-screening candidates, not violations; public table excludes IMO numbers and ship names.",
+            "primary_use": "Identifier-removed top MRV consistency-review candidates",
+            "notes": "Describe strictly as manual consistency-review candidates, not violations; public table excludes IMO numbers and ship names.",
         },
         {
             "result_block": "anomaly_figures",
@@ -513,7 +513,7 @@ def make_figures(rows: list[dict[str, Any]], ship_counts: list[dict[str, str]], 
     draw_histogram(
         FIGURE_DIR / "mrv_anomaly_score_distribution.svg",
         [float(row["consensus_score"]) for row in rows],
-        "MRV anomaly-screening consensus score distribution",
+        "MRV consistency-review consensus score distribution",
         "consensus score",
     )
 
@@ -522,7 +522,7 @@ def make_figures(rows: list[dict[str, Any]], ship_counts: list[dict[str, str]], 
         FIGURE_DIR / "mrv_anomaly_top_ship_types.svg",
         [row["ship_type"] for row in top_ship_counts],
         [int(row["top_candidate_rows"]) for row in top_ship_counts],
-        f"Top {TOP_CANDIDATES} anomaly-screening candidates by ship type",
+        f"Top {TOP_CANDIDATES} consistency-review candidates by ship type",
         "candidate rows",
     )
 

@@ -43,13 +43,16 @@ def build_key_numbers() -> list[dict[str, str]]:
         ("dataset", "total processed MRV rows", processed["total_rows"], "mrv_processed_summary.csv", "Data section"),
         ("dataset", "main 2018-2023 experiment rows", processed["main_experiment_rows"], "mrv_processed_summary.csv", "Data section"),
         ("dataset", "labeled main experiment rows", processed["labeled_main_experiment_rows"], "mrv_processed_summary.csv", "Data section"),
+        ("dataset", "unlabeled main experiment rows", processed["unlabeled_main_experiment_rows"], "mrv_processed_summary.csv", "Label construction note"),
+        ("dataset", "labeling minimum ship-type-year rows", processed["labeling_min_ship_type_year_rows"], "mrv_processed_summary.csv", "Label construction note"),
+        ("dataset", "main ship-type-year groups below threshold", processed["main_below_threshold_groups"], "mrv_processed_summary.csv", "Label construction note"),
         ("dataset", "external 2024 full-year rows", processed["external_2024_rows"], "mrv_processed_summary.csv", "Data section"),
         ("dataset", "excluded 2024 partial ER rows", processed["partial_er_rows"], "mrv_processed_summary.csv", "Data exclusion note"),
         ("dataset", "unique IMO numbers", processed["unique_imo_numbers"], "mrv_processed_summary.csv", "Data section"),
         ("dataset", "unique ship types", processed["unique_ship_types"], "mrv_processed_summary.csv", "Data section"),
         ("classification", "train rows", baseline["train_rows"], "mrv_baseline_run_summary.csv", "Temporal split description"),
-        ("classification", "validation rows", baseline["validation_rows"], "mrv_baseline_run_summary.csv", "Temporal split description"),
-        ("classification", "test rows", baseline["test_rows"], "mrv_baseline_run_summary.csv", "Temporal split description"),
+        ("classification", "2022 holdout rows", baseline["holdout_2022_rows"], "mrv_baseline_run_summary.csv", "Temporal split description"),
+        ("classification", "2023 test rows", baseline["test_2023_rows"], "mrv_baseline_run_summary.csv", "Temporal split description"),
         ("classification", "best temporal test feature set", baseline["best_temporal_test_feature_set"], "mrv_baseline_run_summary.csv", "Main results"),
         ("classification", "best temporal test model", baseline["best_temporal_test_model"], "mrv_baseline_run_summary.csv", "Main results"),
         ("classification", "best temporal test Macro-F1", baseline["best_temporal_test_macro_f1"], "mrv_baseline_run_summary.csv", "Main results"),
@@ -58,11 +61,11 @@ def build_key_numbers() -> list[dict[str, str]]:
         ("ship-type ablation", "best ship-type model Macro-F1", ship_type["best_test_macro_f1"], "mrv_ship_type_run_summary.csv", "Ablation result"),
         ("interpretability", "top permutation feature", ship_type["top_permutation_feature"], "mrv_ship_type_run_summary.csv", "Feature importance"),
         ("interpretability", "top permutation Macro-F1 drop", ship_type["top_permutation_macro_f1_drop"], "mrv_ship_type_run_summary.csv", "Feature importance"),
-        ("anomaly screening", "eligible full-year rows", anomaly["eligible_full_year_rows"], "mrv_anomaly_run_summary.csv", "Consistency screening setup"),
-        ("anomaly screening", "modeled rows", anomaly["modeled_rows"], "mrv_anomaly_run_summary.csv", "Consistency screening setup"),
-        ("anomaly screening", "modeled ship types", anomaly["modeled_ship_types"], "mrv_anomaly_run_summary.csv", "Consistency screening setup"),
-        ("anomaly screening", "all-three-method rows at 2%", sensitivity_2pct["all_three_methods"], "mrv_anomaly_sensitivity_summary.csv", "Sensitivity result"),
-        ("anomaly screening", "at-least-two-method rows at 2%", sensitivity_2pct["at_least_two_methods"], "mrv_anomaly_sensitivity_summary.csv", "Sensitivity result"),
+        ("consistency review", "eligible full-year rows", anomaly["eligible_full_year_rows"], "mrv_anomaly_run_summary.csv", "Consistency screening setup"),
+        ("consistency review", "modeled rows", anomaly["modeled_rows"], "mrv_anomaly_run_summary.csv", "Consistency screening setup"),
+        ("consistency review", "modeled ship types", anomaly["modeled_ship_types"], "mrv_anomaly_run_summary.csv", "Consistency screening setup"),
+        ("consistency review", "all-three-method rows at 2%", sensitivity_2pct["all_three_methods"], "mrv_anomaly_sensitivity_summary.csv", "Sensitivity result"),
+        ("consistency review", "at-least-two-method rows at 2%", sensitivity_2pct["at_least_two_methods"], "mrv_anomaly_sensitivity_summary.csv", "Sensitivity result"),
     ]
     return [
         {
@@ -103,7 +106,7 @@ def build_main_model_results() -> list[dict[str, str]]:
 def build_class_metrics() -> list[dict[str, str]]:
     labels = ["efficient", "medium", "inefficient"]
     matrices = read_csv(TABLE_DIR / "mrv_baseline_confusion_matrices.csv")
-    selected_splits = ["validation_2022", "test_2023", "external_2024"]
+    selected_splits = ["holdout_2022", "test_2023", "external_2024"]
     out = []
     for split in selected_splits:
         rows = [
@@ -138,6 +141,72 @@ def build_class_metrics() -> list[dict[str, str]]:
                     "predicted_rows": str(predicted),
                 }
             )
+    return out
+
+
+def build_label_diagnostics() -> list[dict[str, str]]:
+    coverage = [
+        row
+        for row in read_csv(TABLE_DIR / "mrv_label_coverage_by_year.csv")
+        if row["report_scope"] == "annual_er"
+        and row["reporting_year"] in {"2018", "2019", "2020", "2021", "2022", "2023"}
+    ]
+    group_rows = [
+        row
+        for row in read_csv(TABLE_DIR / "mrv_label_group_coverage.csv")
+        if row["report_scope"] == "annual_er"
+        and row["reporting_year"] in {"2018", "2019", "2020", "2021", "2022", "2023"}
+    ]
+    by_year: dict[str, dict[str, int]] = {}
+    for row in group_rows:
+        stats = by_year.setdefault(
+            row["reporting_year"],
+            {"groups": 0, "below_threshold_groups": 0, "below_threshold_target_rows": 0, "missing_target_rows": 0},
+        )
+        stats["groups"] += 1
+        if row["labeling_status"] == "below_min_target_rows":
+            stats["below_threshold_groups"] += 1
+        stats["below_threshold_target_rows"] += int(row["below_threshold_target_rows"])
+        stats["missing_target_rows"] += int(row["missing_target_rows"])
+
+    out = []
+    for row in sorted(coverage, key=lambda item: item["reporting_year"]):
+        stats = by_year.get(row["reporting_year"], {})
+        out.append(
+            {
+                "reporting_year": row["reporting_year"],
+                "temporal_split": row["temporal_split"],
+                "rows": row["rows"],
+                "labeled_rows": row["labeled_rows"],
+                "unlabeled_rows": row["unlabeled_rows"],
+                "label_coverage_pct": row["label_coverage_pct"],
+                "ship_type_year_groups": str(stats.get("groups", 0)),
+                "below_threshold_groups": str(stats.get("below_threshold_groups", 0)),
+                "below_threshold_target_rows": str(stats.get("below_threshold_target_rows", 0)),
+                "missing_target_rows": str(stats.get("missing_target_rows", 0)),
+            }
+        )
+    return out
+
+
+def build_imo_overlap_summary() -> list[dict[str, str]]:
+    rows = [
+        row
+        for row in read_csv(TABLE_DIR / "mrv_temporal_imo_overlap.csv")
+        if row["split_a"] == "train"
+    ]
+    out = []
+    for row in rows:
+        out.append(
+            {
+                "comparison": row["display_pair"],
+                "later_split": row["split_b"],
+                "train_unique_imo": row["unique_imo_a"],
+                "later_unique_imo": row["unique_imo_b"],
+                "overlap_imo_numbers": row["overlap_imo_numbers"],
+                "overlap_pct_of_later_split": row["overlap_pct_of_b"],
+            }
+        )
     return out
 
 
@@ -242,7 +311,7 @@ def build_table_plan() -> list[dict[str, str]]:
         {
             "table_id": "Table 5",
             "artifact": "reports/tables/mrv_anomaly_sensitivity_summary.csv",
-            "caption": "Sensitivity of anomaly-screening candidates under 1%, 2%, and 5% ship-type-specific thresholds.",
+            "caption": "Sensitivity of consistency-review candidates under 1%, 2%, and 5% ship-type-specific thresholds.",
             "section": "Consistency screening",
             "status": "ready",
         },
@@ -252,6 +321,20 @@ def build_table_plan() -> list[dict[str, str]]:
             "caption": "Class-level precision, recall, F1, support, and predicted-row counts for the best temporal classifier.",
             "section": "Main results",
             "status": "ready for supplementary release or condensed in text",
+        },
+        {
+            "table_id": "Supplementary Table S2",
+            "artifact": "reports/tables/mrv_paper_label_diagnostics.csv",
+            "caption": "Label coverage and unlabeled-row diagnostics by reporting year.",
+            "section": "Data",
+            "status": "ready",
+        },
+        {
+            "table_id": "Supplementary Table S3",
+            "artifact": "reports/tables/mrv_paper_imo_overlap_summary.csv",
+            "caption": "IMO-number recurrence between the 2018-2021 training split and later-year evaluation splits.",
+            "section": "Evaluation design",
+            "status": "ready",
         },
     ]
 
@@ -271,6 +354,13 @@ def build_figure_captions() -> list[dict[str, str]]:
             "caption": "Distribution of ship-type-year tertile labels for CO2 emissions per distance.",
             "section": "Data",
             "message": "The label construction yields balanced efficient, medium, and inefficient classes within each year.",
+        },
+        {
+            "figure_id": "Supplementary Figure S1",
+            "artifact": "reports/figures/mrv_temporal_imo_overlap.svg",
+            "caption": "IMO-number overlap between the 2018-2021 training split and later-year evaluation splits.",
+            "section": "Evaluation design",
+            "message": "Temporal splitting avoids future-year training but does not eliminate recurring-vessel dependence.",
         },
         {
             "figure_id": "Figure 3",
@@ -303,14 +393,14 @@ def build_figure_captions() -> list[dict[str, str]]:
         {
             "figure_id": "Figure 7",
             "artifact": "reports/figures/mrv_anomaly_top_ship_types.svg",
-            "caption": "Ship-type distribution of the top 200 anomaly-screening candidates.",
+            "caption": "Ship-type distribution of the top 200 consistency-review candidates.",
             "section": "Consistency screening",
             "message": "Candidate rows concentrate in large cargo ship categories but include multiple ship types.",
         },
         {
             "figure_id": "Figure 8",
             "artifact": "reports/figures/mrv_anomaly_sensitivity_overlap.svg",
-            "caption": "Sensitivity of anomaly-screening overlap under 1%, 2%, and 5% thresholds.",
+            "caption": "Sensitivity of consistency-review overlap under 1%, 2%, and 5% thresholds.",
             "section": "Consistency screening",
             "message": "The all-three-method and at-least-two-method candidate sets scale predictably with the threshold.",
         },
@@ -365,13 +455,25 @@ def build_results_index() -> list[dict[str, str]]:
             "result_block": "anomaly_screening",
             "artifact": "reports/tables/mrv_anomaly_top_candidates.csv",
             "primary_use": "Identifier-removed top MRV consistency-screening candidates",
-            "notes": "Describe strictly as anomaly-screening candidates, not violations; public table excludes IMO numbers and ship names.",
+            "notes": "Describe strictly as manual consistency-review candidates, not violations; public table excludes IMO numbers and ship names.",
         },
         {
             "result_block": "anomaly_sensitivity",
             "artifact": "reports/tables/mrv_anomaly_sensitivity_summary.csv",
             "primary_use": "1%, 2%, and 5% contamination-threshold sensitivity",
             "notes": "Supports robustness of candidate-set construction.",
+        },
+        {
+            "result_block": "label_diagnostics",
+            "artifact": "reports/tables/mrv_paper_label_diagnostics.csv",
+            "primary_use": "Label coverage, unlabeled rows, and threshold disclosure",
+            "notes": "Supports explicit reporting of the n >= 30 ship-type-year labeling rule.",
+        },
+        {
+            "result_block": "imo_overlap",
+            "artifact": "reports/tables/mrv_paper_imo_overlap_summary.csv",
+            "primary_use": "Temporal recurring-vessel dependence audit",
+            "notes": "Supports limitations around same-IMO recurrence across reporting years.",
         },
         {
             "result_block": "caption_plan",
@@ -392,6 +494,8 @@ def main() -> None:
     write_csv(TABLE_DIR / "mrv_paper_key_numbers.csv", build_key_numbers())
     write_csv(TABLE_DIR / "mrv_paper_main_model_results.csv", build_main_model_results())
     write_csv(TABLE_DIR / "mrv_paper_class_metrics.csv", build_class_metrics())
+    write_csv(TABLE_DIR / "mrv_paper_label_diagnostics.csv", build_label_diagnostics())
+    write_csv(TABLE_DIR / "mrv_paper_imo_overlap_summary.csv", build_imo_overlap_summary())
     write_csv(TABLE_DIR / "mrv_paper_ship_type_results.csv", build_ship_type_results())
     write_csv(TABLE_DIR / "mrv_paper_interpretability_results.csv", build_interpretability_results())
     write_csv(TABLE_DIR / "mrv_paper_table_plan.csv", build_table_plan())

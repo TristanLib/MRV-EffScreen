@@ -106,6 +106,7 @@
 1. 在 `ship_type + reporting_year` 内计算三分位数。
 2. 低三分位为 `efficient`，中三分位为 `medium`，高三分位为 `inefficient`。
 3. 仅在同船型、同年度内比较，避免跨船型尺度差异。
+4. 只有组内 `co2_per_distance_kg_nm` 非缺失样本数不少于 30 行时才分配标签；小样本组和目标字段缺失行保留为未标注记录，不进入主分类实验。
 
 优点：全船型可用、缺失率低、适合快速跑通基线。缺点：只按距离标准化，不如 transport work 贴近实际运输效率。
 
@@ -126,15 +127,15 @@
 
 第一版不要把所有船型强行套同一个 transport work 指标，否则解释成本会升高。
 
-### 异常检测标签
+### 一致性复核候选筛查
 
 第一版不做人工真值标签，采用无监督和残差排序：
 
-1. Isolation Forest：在船型内使用运营和强度字段识别 top-k 异常。
+1. Isolation Forest：在船型内使用运营和强度字段识别 top-k 复核候选。
 2. LOF：作为局部密度对照。
 3. 回归残差：用非目标字段预测 CO2 per distance 或 total CO2，取残差 top-k 做案例分析。
 
-异常结果只能表述为“异常筛查候选”，不能表述为合规违规或虚假申报。
+筛查结果只能表述为“人工一致性复核候选”，不能表述为合规违规、虚假申报或已验证异常。
 
 ## 泄漏字段清单
 
@@ -149,14 +150,14 @@
 
 1. `strict_static`：船型、年份、技术能效、注册港、冰级、监测方法，不含燃油和排放。
 2. `operational_no_emission`：在 static 基础上加入海上时间、through ice、报告覆盖相关字段，但仍不含燃油/排放强度。
-3. `consistency_screening`：用于异常检测，可加入燃油、排放总量和强度字段，但论文中明确它是数据一致性/异常筛查，不是预测式能效分类。
+3. `consistency_screening`：用于一致性复核候选筛查，可加入燃油、排放总量和强度字段，但论文中明确它是人工复核队列，不是预测式能效分类。
 
 ## 第一版实验范围建议
 
 主实验：
 
 1. 使用 2018-2023 数据建立兼容字段基线。
-2. 训练集：2018-2021，验证集：2022，测试集：2023。
+2. 训练集：2018-2021，2022 holdout，2023 主测试集。
 3. 另做随机分层切分作为对照。
 4. 使用 Full ERs 的 2024 作为外部年度测试或扩展实验，不把 Partial ERs 放入主结果。
 
@@ -174,7 +175,7 @@
    - `technical_efficiency_value`
    - `technical_efficiency_is_not_applicable`
 3. 主标签确定为 `ship_type + reporting_year` 内的 `co2_per_distance_kg_nm` 三分类。
-4. 2018-2023 作为主实验；2024 Full ERs 标记为 `external_2024`；2024 Partial ERs 标记为 `excluded_partial_2024`。
+4. 2018-2023 作为主实验；2022 标记为 `holdout_2022`，2023 标记为 `test_2023`；2024 Full ERs 标记为 `external_2024`；2024 Partial ERs 标记为 `excluded_partial_2024`。
 5. 缺失处理策略与特征集定义已写入 `docs/mrv_feature_sets.md`。
 
 第二周生成的主要数据集：
@@ -187,4 +188,6 @@
 - `reports/tables/mrv_processed_missingness.csv`
 - `reports/tables/mrv_processed_summary.csv`
 - `reports/tables/mrv_label_distribution.csv`
+- `reports/tables/mrv_label_coverage_by_year.csv`
+- `reports/tables/mrv_label_group_coverage.csv`
 - `reports/tables/mrv_year_scope_counts.csv`
