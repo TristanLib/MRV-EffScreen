@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="560" viewBox="0 0 1350 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="675.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" fill="#1f2933">Top ship types: unified vs ship-specific Macro-F1</text>
+<text x="18" y="232.0" transform="rotate(-90 18 232.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#52606d">macro f1</text>
+<line x1="72" y1="410" x2="1326" y2="410" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="72" y1="54" x2="72" y2="410" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="68" y1="410.00" x2="1326" y2="410.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="414.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.00</text>
+<line x1="68" y1="338.80" x2="1326" y2="338.80" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="342.80" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.15</text>
+<line x1="68" y1="267.60" x2="1326" y2="267.60" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="271.60" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.31</text>
+<line x1="68" y1="196.40" x2="1326" y2="196.40" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="200.40" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.46</text>
+<line x1="68" y1="125.20" x2="1326" y2="125.20" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="129.20" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.62</text>
+<line x1="68" y1="54.00" x2="1326" y2="54.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="58.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.77</text>
+<rect x="72.00" y="140.24" width="55.10" height="269.76" fill="#2f6f73"/>
+<text x="99.55" y="135.24" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.583</text>
+<text x="99.55" y="428.00" transform="rotate(55 99.55 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Bulk carrier | unified | strict s…</text>
+<rect x="135.10" y="99.47" width="55.10" height="310.53" fill="#8f5f2a"/>
+<text x="162.65" y="94.47" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.671</text>
+<text x="162.65" y="428.00" transform="rotate(55 162.65 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Oil tanker | unified | strict sta…</text>
+<rect x="198.20" y="128.22" width="55.10" height="281.78" fill="#4f6f9f"/>
+<text x="225.75" y="123.22" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.609</text>
+<text x="225.75" y="428.00" transform="rotate(55 225.75 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Container ship | unified | strict…</text>
+<rect x="261.30" y="145.94" width="55.10" height="264.06" fill="#a64d4d"/>
+<text x="288.85" y="140.94" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.571</text>
+<text x="288.85" y="428.00" transform="rotate(55 288.85 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Chemical tanker | unified | stric…</text>
+<rect x="324.40" y="133.09" width="55.10" height="276.91" fill="#5e6c84"/>
+<text x="351.95" y="128.09" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.598</text>
+<text x="351.95" y="428.00" transform="rotate(55 351.95 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">General cargo ship | unified | st…</text>
+<rect x="387.50" y="142.05" width="55.10" height="267.95" fill="#6f5e9c"/>
+<text x="415.05" y="137.05" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.579</text>
+<text x="415.05" y="428.00" transform="rotate(55 415.05 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Bulk carrier | ship_type | strict…</text>
+<rect x="450.60" y="92.14" width="55.10" height="317.86" fill="#2f6f73"/>
+<text x="478.15" y="87.14" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.687</text>
+<text x="478.15" y="428.00" transform="rotate(55 478.15 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Oil tanker | ship_type | strict s…</text>
+<rect x="513.70" y="111.06" width="55.10" height="298.94" fill="#8f5f2a"/>
+<text x="541.25" y="106.06" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.646</text>
+<text x="541.25" y="428.00" transform="rotate(55 541.25 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Container ship | ship_type | stri…</text>
+<rect x="576.80" y="147.31" width="55.10" height="262.69" fill="#4f6f9f"/>
+<text x="604.35" y="142.31" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.568</text>
+<text x="604.35" y="428.00" transform="rotate(55 604.35 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Chemical tanker | ship_type | str…</text>
+<rect x="639.90" y="111.78" width="55.10" height="298.22" fill="#a64d4d"/>
+<text x="667.45" y="106.78" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.644</text>
+<text x="667.45" y="428.00" transform="rotate(55 667.45 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">General cargo ship | ship_type | …</text>
+<rect x="703.00" y="136.88" width="55.10" height="273.12" fill="#5e6c84"/>
+<text x="730.55" y="131.88" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.590</text>
+<text x="730.55" y="428.00" transform="rotate(55 730.55 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Bulk carrier | unified | operatio…</text>
+<rect x="766.10" y="97.89" width="55.10" height="312.11" fill="#6f5e9c"/>
+<text x="793.65" y="92.89" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.674</text>
+<text x="793.65" y="428.00" transform="rotate(55 793.65 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Oil tanker | unified | operationa…</text>
+<rect x="829.20" y="122.12" width="55.10" height="287.88" fill="#2f6f73"/>
+<text x="856.75" y="117.12" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.622</text>
+<text x="856.75" y="428.00" transform="rotate(55 856.75 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Container ship | unified | operat…</text>
+<rect x="892.30" y="147.92" width="55.10" height="262.08" fill="#8f5f2a"/>
+<text x="919.85" y="142.92" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.566</text>
+<text x="919.85" y="428.00" transform="rotate(55 919.85 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Chemical tanker | unified | opera…</text>
+<rect x="955.40" y="135.62" width="55.10" height="274.38" fill="#4f6f9f"/>
+<text x="982.95" y="130.62" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.593</text>
+<text x="982.95" y="428.00" transform="rotate(55 982.95 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">General cargo ship | unified | op…</text>
+<rect x="1018.50" y="138.09" width="55.10" height="271.91" fill="#a64d4d"/>
+<text x="1046.05" y="133.09" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.588</text>
+<text x="1046.05" y="428.00" transform="rotate(55 1046.05 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Bulk carrier | ship_type | operat…</text>
+<rect x="1081.60" y="94.36" width="55.10" height="315.64" fill="#5e6c84"/>
+<text x="1109.15" y="89.36" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.682</text>
+<text x="1109.15" y="428.00" transform="rotate(55 1109.15 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Oil tanker | ship_type | operatio…</text>
+<rect x="1144.70" y="124.73" width="55.10" height="285.27" fill="#6f5e9c"/>
+<text x="1172.25" y="119.73" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.616</text>
+<text x="1172.25" y="428.00" transform="rotate(55 1172.25 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Container ship | ship_type | oper…</text>
+<rect x="1207.80" y="140.03" width="55.10" height="269.97" fill="#2f6f73"/>
+<text x="1235.35" y="135.03" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.583</text>
+<text x="1235.35" y="428.00" transform="rotate(55 1235.35 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">Chemical tanker | ship_type | ope…</text>
+<rect x="1270.90" y="120.23" width="55.10" height="289.77" fill="#8f5f2a"/>
+<text x="1298.45" y="115.23" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.626</text>
+<text x="1298.45" y="428.00" transform="rotate(55 1298.45 428.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">General cargo ship | ship_type | …</text>
+</svg>

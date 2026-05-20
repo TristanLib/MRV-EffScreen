@@ -1,0 +1,9 @@
+overlap_rule,rows,share_of_modeled_rows
+isolation_top2pct,1727,0.020097
+lof_top2pct,1727,0.020097
+residual_top2pct,1727,0.020097
+isolation_and_lof,398,0.004632
+isolation_and_residual,575,0.006691
+lof_and_residual,546,0.006354
+all_three_methods,226,0.002630
+consensus_global_top200,200,0.002327

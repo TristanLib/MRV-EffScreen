@@ -1,0 +1,19 @@
+scenario,split,feature_set,model,rows,accuracy,balanced_accuracy,macro_f1,weighted_f1,recommended_use
+random_stratified,random_test,operational_no_emission,hist_gradient_boosting,14609,0.658019,0.657998,0.654584,0.654602,optimistic random-split comparison
+random_stratified,random_test,operational_no_emission,logistic_regression,14609,0.435006,0.435024,0.426132,0.426136,optimistic random-split comparison
+random_stratified,random_test,operational_no_emission,random_forest,14609,0.610925,0.610898,0.601525,0.601537,optimistic random-split comparison
+random_stratified,random_test,strict_static,hist_gradient_boosting,14609,0.660141,0.660115,0.656911,0.656933,optimistic random-split comparison
+random_stratified,random_test,strict_static,logistic_regression,14609,0.439797,0.439817,0.431264,0.431268,optimistic random-split comparison
+random_stratified,random_test,strict_static,random_forest,14609,0.608666,0.608619,0.598839,0.598851,optimistic random-split comparison
+temporal,external_2024,operational_no_emission,hist_gradient_boosting,12905,0.586904,0.586704,0.585118,0.585194,external-year robustness check
+temporal,external_2024,operational_no_emission,logistic_regression,12905,0.412088,0.411840,0.403191,0.403278,external-year robustness check
+temporal,external_2024,operational_no_emission,random_forest,12905,0.561488,0.561522,0.549593,0.549570,external-year robustness check
+temporal,external_2024,strict_static,hist_gradient_boosting,12905,0.582100,0.581889,0.580479,0.580558,external-year robustness check
+temporal,external_2024,strict_static,logistic_regression,12905,0.413406,0.413183,0.400337,0.400406,external-year robustness check
+temporal,external_2024,strict_static,random_forest,12905,0.560170,0.560229,0.549834,0.549803,external-year robustness check
+temporal,test_2023,operational_no_emission,hist_gradient_boosting,12615,0.604994,0.604923,0.603196,0.603233,main temporal generalization result
+temporal,test_2023,operational_no_emission,logistic_regression,12615,0.424495,0.424416,0.417497,0.417529,main temporal generalization result
+temporal,test_2023,operational_no_emission,random_forest,12615,0.573207,0.573166,0.559537,0.559564,main temporal generalization result
+temporal,test_2023,strict_static,hist_gradient_boosting,12615,0.602933,0.602854,0.601444,0.601485,main temporal generalization result
+temporal,test_2023,strict_static,logistic_regression,12615,0.429409,0.429319,0.418219,0.418257,main temporal generalization result
+temporal,test_2023,strict_static,random_forest,12615,0.566944,0.566903,0.555572,0.555600,main temporal generalization result

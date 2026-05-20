@@ -1,0 +1,24 @@
+result_group,metric,value,source_table,manuscript_use
+dataset,total processed MRV rows,90745,mrv_processed_summary.csv,Data section
+dataset,main 2018-2023 experiment rows,75580,mrv_processed_summary.csv,Data section
+dataset,labeled main experiment rows,73045,mrv_processed_summary.csv,Data section
+dataset,external 2024 full-year rows,14139,mrv_processed_summary.csv,Data section
+dataset,excluded 2024 partial ER rows,1026,mrv_processed_summary.csv,Data exclusion note
+dataset,unique IMO numbers,22551,mrv_processed_summary.csv,Data section
+dataset,unique ship types,17,mrv_processed_summary.csv,Data section
+classification,train rows,47380,mrv_baseline_run_summary.csv,Temporal split description
+classification,validation rows,13050,mrv_baseline_run_summary.csv,Temporal split description
+classification,test rows,12615,mrv_baseline_run_summary.csv,Temporal split description
+classification,best temporal test feature set,operational_no_emission,mrv_baseline_run_summary.csv,Main results
+classification,best temporal test model,hist_gradient_boosting,mrv_baseline_run_summary.csv,Main results
+classification,best temporal test Macro-F1,0.603196,mrv_baseline_run_summary.csv,Main results
+classification,best temporal test balanced accuracy,0.604923,mrv_baseline_run_summary.csv,Main results
+ship-type ablation,top ship types,Bulk carrier; Oil tanker; Container ship; Chemical tanker; General cargo ship,mrv_ship_type_run_summary.csv,Ablation setup
+ship-type ablation,best ship-type model Macro-F1,0.686842,mrv_ship_type_run_summary.csv,Ablation result
+interpretability,top permutation feature,technical_efficiency_value,mrv_ship_type_run_summary.csv,Feature importance
+interpretability,top permutation Macro-F1 drop,0.228348,mrv_ship_type_run_summary.csv,Feature importance
+anomaly screening,eligible full-year rows,86035,mrv_anomaly_run_summary.csv,Consistency screening setup
+anomaly screening,modeled rows,85932,mrv_anomaly_run_summary.csv,Consistency screening setup
+anomaly screening,modeled ship types,14,mrv_anomaly_run_summary.csv,Consistency screening setup
+anomaly screening,all-three-method rows at 2%,226,mrv_anomaly_sensitivity_summary.csv,Sensitivity result
+anomaly screening,at-least-two-method rows at 2%,1067,mrv_anomaly_sensitivity_summary.csv,Sensitivity result

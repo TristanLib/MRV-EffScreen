@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="490.0" y="30" text-anchor="middle" font-family="Arial" font-size="18" fill="#1f2933">Top 200 anomaly-screening candidates by ship type</text>
+<text x="18" y="214.0" transform="rotate(-90 18 214.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#52606d">candidate rows</text>
+<line x1="76" y1="370" x2="954" y2="370" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="76" y1="58" x2="76" y2="370" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="72" y1="370.00" x2="954" y2="370.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="374.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0</text>
+<line x1="72" y1="307.60" x2="954" y2="307.60" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="311.60" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">14</text>
+<line x1="72" y1="245.20" x2="954" y2="245.20" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="249.20" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">27</text>
+<line x1="72" y1="182.80" x2="954" y2="182.80" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="186.80" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">41</text>
+<line x1="72" y1="120.40" x2="954" y2="120.40" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="124.40" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">54</text>
+<line x1="72" y1="58.00" x2="954" y2="58.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="62.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">68</text>
+<rect x="76.00" y="99.29" width="62.17" height="270.71" fill="#2f6f73"/>
+<text x="107.08" y="94.29" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">59</text>
+<text x="107.08" y="388.00" transform="rotate(50 107.08 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Bulk carrier</text>
+<rect x="150.17" y="209.41" width="62.17" height="160.59" fill="#8f5f2a"/>
+<text x="181.25" y="204.41" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">35</text>
+<text x="181.25" y="388.00" transform="rotate(50 181.25 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Oil tanker</text>
+<rect x="224.33" y="269.06" width="62.17" height="100.94" fill="#4f6f9f"/>
+<text x="255.42" y="264.06" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">22</text>
+<text x="255.42" y="388.00" transform="rotate(50 255.42 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">General cargo ship</text>
+<rect x="298.50" y="282.82" width="62.17" height="87.18" fill="#a64d4d"/>
+<text x="329.58" y="277.82" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">19</text>
+<text x="329.58" y="388.00" transform="rotate(50 329.58 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Chemical tanker</text>
+<rect x="372.67" y="292.00" width="62.17" height="78.00" fill="#5e6c84"/>
+<text x="403.75" y="287.00" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">17</text>
+<text x="403.75" y="388.00" transform="rotate(50 403.75 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Container ship</text>
+<rect x="446.83" y="319.53" width="62.17" height="50.47" fill="#6f5e9c"/>
+<text x="477.92" y="314.53" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">11</text>
+<text x="477.92" y="388.00" transform="rotate(50 477.92 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Ro-pax ship</text>
+<rect x="521.00" y="319.53" width="62.17" height="50.47" fill="#2f6f73"/>
+<text x="552.08" y="314.53" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">11</text>
+<text x="552.08" y="388.00" transform="rotate(50 552.08 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Vehicle carrier</text>
+<rect x="595.17" y="342.47" width="62.17" height="27.53" fill="#8f5f2a"/>
+<text x="626.25" y="337.47" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">6</text>
+<text x="626.25" y="388.00" transform="rotate(50 626.25 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Other ship types</text>
+<rect x="669.33" y="347.06" width="62.17" height="22.94" fill="#4f6f9f"/>
+<text x="700.42" y="342.06" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">5</text>
+<text x="700.42" y="388.00" transform="rotate(50 700.42 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">LNG carrier</text>
+<rect x="743.50" y="347.06" width="62.17" height="22.94" fill="#a64d4d"/>
+<text x="774.58" y="342.06" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">5</text>
+<text x="774.58" y="388.00" transform="rotate(50 774.58 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Container/ro-ro cargo ship</text>
+<rect x="817.67" y="356.24" width="62.17" height="13.76" fill="#5e6c84"/>
+<text x="848.75" y="351.24" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">3</text>
+<text x="848.75" y="388.00" transform="rotate(50 848.75 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Gas carrier</text>
+<rect x="891.83" y="356.24" width="62.17" height="13.76" fill="#6f5e9c"/>
+<text x="922.92" y="351.24" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">3</text>
+<text x="922.92" y="388.00" transform="rotate(50 922.92 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">Ro-ro ship</text>
+</svg>

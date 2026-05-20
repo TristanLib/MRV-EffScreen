@@ -1,0 +1,28 @@
+ship_type,predicted_label,medium_errors
+Bulk carrier,efficient,339
+Container ship,inefficient,261
+General cargo ship,inefficient,176
+Bulk carrier,inefficient,169
+Container ship,efficient,161
+Chemical tanker,efficient,155
+Oil tanker,efficient,136
+LNG carrier,efficient,96
+General cargo ship,efficient,92
+Other ship types,efficient,75
+Oil tanker,inefficient,65
+Chemical tanker,inefficient,52
+Vehicle carrier,efficient,47
+Ro-pax ship,efficient,40
+Vehicle carrier,inefficient,40
+Gas carrier,inefficient,35
+Ro-pax ship,inefficient,31
+Passenger ship,inefficient,29
+Passenger ship,efficient,28
+Gas carrier,efficient,26
+Ro-ro ship,efficient,26
+Ro-ro ship,inefficient,22
+Other ship types,inefficient,21
+Refrigerated cargo carrier,efficient,21
+Container/ro-ro cargo ship,inefficient,13
+LNG carrier,inefficient,5
+Refrigerated cargo carrier,inefficient,4

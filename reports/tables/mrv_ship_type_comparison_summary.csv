@@ -1,0 +1,11 @@
+ship_type,feature_set,unified_macro_f1,ship_type_macro_f1,macro_f1_delta_ship_minus_unified,unified_balanced_accuracy,ship_type_balanced_accuracy,balanced_accuracy_delta_ship_minus_unified
+Bulk carrier,operational_no_emission,0.590181,0.587560,-0.002621,0.589071,0.585534,-0.003537
+Bulk carrier,strict_static,0.582912,0.579009,-0.003903,0.583077,0.577088,-0.005989
+Chemical tanker,operational_no_emission,0.566321,0.583368,0.017047,0.583247,0.589204,0.005957
+Chemical tanker,strict_static,0.570585,0.567639,-0.002946,0.587676,0.575156,-0.012520
+Container ship,operational_no_emission,0.622075,0.616427,-0.005648,0.642746,0.625585,-0.017161
+Container ship,strict_static,0.608882,0.645957,0.037075,0.635465,0.654186,0.018721
+General cargo ship,operational_no_emission,0.592890,0.626152,0.033262,0.607500,0.637500,0.030000
+General cargo ship,strict_static,0.598364,0.644408,0.046044,0.620000,0.650000,0.030000
+Oil tanker,operational_no_emission,0.674432,0.682056,0.007624,0.680790,0.683410,0.002620
+Oil tanker,strict_static,0.671003,0.686842,0.015839,0.678183,0.689133,0.010950

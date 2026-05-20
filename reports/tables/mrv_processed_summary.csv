@@ -1,0 +1,9 @@
+metric,value
+total_rows,90745
+main_experiment_rows,75580
+labeled_main_experiment_rows,73045
+external_2024_rows,14139
+partial_er_rows,1026
+unique_imo_numbers,22551
+unique_ship_types,17
+median_co2_per_distance_labeled_main,310.22

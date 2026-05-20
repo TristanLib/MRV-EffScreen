@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" fill="#1f2933">Distance-efficiency labels by year</text>
+<text x="18" y="252.0" transform="rotate(-90 18 252.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#52606d">Rows</text>
+<line x1="78" y1="450" x2="1074" y2="450" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="78" y1="54" x2="78" y2="450" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="74" y1="450.00" x2="1074" y2="450.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="70" y="454.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.0</text>
+<line x1="74" y1="351.00" x2="1074" y2="351.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="70" y="355.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">1k</text>
+<line x1="74" y1="252.00" x2="1074" y2="252.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="70" y="256.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">2k</text>
+<line x1="74" y1="153.00" x2="1074" y2="153.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="70" y="157.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">3k</text>
+<line x1="74" y1="54.00" x2="1074" y2="54.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="70" y="58.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">4k</text>
+<rect x="78.00" y="97.57" width="49.67" height="352.43" fill="#2f6f73"/>
+<text x="102.83" y="468.00" transform="rotate(55 102.83 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2018 efficient</text>
+<rect x="133.67" y="97.93" width="49.67" height="352.07" fill="#8f5f2a"/>
+<text x="158.50" y="468.00" transform="rotate(55 158.50 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2018 medium</text>
+<rect x="189.33" y="98.57" width="49.67" height="351.43" fill="#4f6f9f"/>
+<text x="214.17" y="468.00" transform="rotate(55 214.17 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2018 inefficient</text>
+<rect x="245.00" y="83.47" width="49.67" height="366.53" fill="#a64d4d"/>
+<text x="269.83" y="468.00" transform="rotate(55 269.83 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2019 efficient</text>
+<rect x="300.67" y="84.01" width="49.67" height="365.99" fill="#5e6c84"/>
+<text x="325.50" y="468.00" transform="rotate(55 325.50 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2019 medium</text>
+<rect x="356.33" y="84.74" width="49.67" height="365.26" fill="#2f6f73"/>
+<text x="381.17" y="468.00" transform="rotate(55 381.17 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2019 inefficient</text>
+<rect x="412.00" y="94.29" width="49.67" height="355.71" fill="#8f5f2a"/>
+<text x="436.83" y="468.00" transform="rotate(55 436.83 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2020 efficient</text>
+<rect x="467.67" y="94.84" width="49.67" height="355.16" fill="#4f6f9f"/>
+<text x="492.50" y="468.00" transform="rotate(55 492.50 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2020 medium</text>
+<rect x="523.33" y="95.11" width="49.67" height="354.89" fill="#a64d4d"/>
+<text x="548.17" y="468.00" transform="rotate(55 548.17 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2020 inefficient</text>
+<rect x="579.00" y="86.20" width="49.67" height="363.80" fill="#5e6c84"/>
+<text x="603.83" y="468.00" transform="rotate(55 603.83 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2021 efficient</text>
+<rect x="634.67" y="86.92" width="49.67" height="363.08" fill="#2f6f73"/>
+<text x="659.50" y="468.00" transform="rotate(55 659.50 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2021 medium</text>
+<rect x="690.33" y="87.11" width="49.67" height="362.89" fill="#8f5f2a"/>
+<text x="715.17" y="468.00" transform="rotate(55 715.17 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2021 inefficient</text>
+<rect x="746.00" y="54.00" width="49.67" height="396.00" fill="#4f6f9f"/>
+<text x="770.83" y="468.00" transform="rotate(55 770.83 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2022 efficient</text>
+<rect x="801.67" y="54.45" width="49.67" height="395.55" fill="#a64d4d"/>
+<text x="826.50" y="468.00" transform="rotate(55 826.50 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2022 medium</text>
+<rect x="857.33" y="54.64" width="49.67" height="395.36" fill="#5e6c84"/>
+<text x="882.17" y="468.00" transform="rotate(55 882.17 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2022 inefficient</text>
+<rect x="913.00" y="67.10" width="49.67" height="382.90" fill="#2f6f73"/>
+<text x="937.83" y="468.00" transform="rotate(55 937.83 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2023 efficient</text>
+<rect x="968.67" y="67.64" width="49.67" height="382.36" fill="#8f5f2a"/>
+<text x="993.50" y="468.00" transform="rotate(55 993.50 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2023 medium</text>
+<rect x="1024.33" y="67.92" width="49.67" height="382.08" fill="#4f6f9f"/>
+<text x="1049.17" y="468.00" transform="rotate(55 1049.17 468.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">2023 inefficient</text>
+</svg>

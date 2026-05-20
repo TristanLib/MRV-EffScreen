@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="490.0" y="30" text-anchor="middle" font-family="Arial" font-size="18" fill="#1f2933">Anomaly-screening method overlap</text>
+<text x="18" y="214.0" transform="rotate(-90 18 214.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#52606d">rows</text>
+<line x1="76" y1="370" x2="954" y2="370" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="76" y1="58" x2="76" y2="370" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="72" y1="370.00" x2="954" y2="370.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="374.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0</text>
+<line x1="72" y1="307.60" x2="954" y2="307.60" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="311.60" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">397</text>
+<line x1="72" y1="245.20" x2="954" y2="245.20" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="249.20" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">795</text>
+<line x1="72" y1="182.80" x2="954" y2="182.80" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="186.80" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">1192</text>
+<line x1="72" y1="120.40" x2="954" y2="120.40" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="124.40" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">1590</text>
+<line x1="72" y1="58.00" x2="954" y2="58.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="68" y="62.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">1987</text>
+<rect x="76.00" y="98.83" width="166.00" height="271.17" fill="#2f6f73"/>
+<text x="159.00" y="93.83" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">1727</text>
+<text x="159.00" y="388.00" transform="rotate(50 159.00 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">isolation_top2pct</text>
+<rect x="254.00" y="98.83" width="166.00" height="271.17" fill="#8f5f2a"/>
+<text x="337.00" y="93.83" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">1727</text>
+<text x="337.00" y="388.00" transform="rotate(50 337.00 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">lof_top2pct</text>
+<rect x="432.00" y="98.83" width="166.00" height="271.17" fill="#4f6f9f"/>
+<text x="515.00" y="93.83" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">1727</text>
+<text x="515.00" y="388.00" transform="rotate(50 515.00 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">residual_top2pct</text>
+<rect x="610.00" y="334.51" width="166.00" height="35.49" fill="#a64d4d"/>
+<text x="693.00" y="329.51" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">226</text>
+<text x="693.00" y="388.00" transform="rotate(50 693.00 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">all_three_methods</text>
+<rect x="788.00" y="338.60" width="166.00" height="31.40" fill="#5e6c84"/>
+<text x="871.00" y="333.60" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">200</text>
+<text x="871.00" y="388.00" transform="rotate(50 871.00 388.00)" text-anchor="start" font-family="Arial" font-size="10" fill="#323f4b">consensus_global_top200</text>
+</svg>

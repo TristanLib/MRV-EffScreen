@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="490.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" fill="#1f2933">Permutation importance: Macro-F1 drop</text>
+<text x="18" y="212.0" transform="rotate(-90 18 212.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#52606d">macro f1 drop</text>
+<line x1="72" y1="370" x2="956" y2="370" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="72" y1="54" x2="72" y2="370" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="68" y1="370.00" x2="956" y2="370.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="374.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.00</text>
+<line x1="68" y1="306.80" x2="956" y2="306.80" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="310.80" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.05</text>
+<line x1="68" y1="243.60" x2="956" y2="243.60" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="247.60" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.10</text>
+<line x1="68" y1="180.40" x2="956" y2="180.40" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="184.40" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.15</text>
+<line x1="68" y1="117.20" x2="956" y2="117.20" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="121.20" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.20</text>
+<line x1="68" y1="54.00" x2="956" y2="54.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="58.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.26</text>
+<rect x="72.00" y="87.86" width="66.33" height="282.14" fill="#2f6f73"/>
+<text x="105.17" y="82.86" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.228</text>
+<text x="105.17" y="388.00" transform="rotate(55 105.17 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">technical_efficiency_value</text>
+<rect x="146.33" y="166.83" width="66.33" height="203.17" fill="#8f5f2a"/>
+<text x="179.50" y="161.83" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.164</text>
+<text x="179.50" y="388.00" transform="rotate(55 179.50 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">ship_type</text>
+<rect x="220.67" y="293.74" width="66.33" height="76.26" fill="#4f6f9f"/>
+<text x="253.83" y="288.74" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.062</text>
+<text x="253.83" y="388.00" transform="rotate(55 253.83 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">technical_efficiency_type</text>
+<rect x="295.00" y="340.16" width="66.33" height="29.84" fill="#a64d4d"/>
+<text x="328.17" y="335.16" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.024</text>
+<text x="328.17" y="388.00" transform="rotate(55 328.17 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">port_of_registry</text>
+<rect x="369.33" y="353.65" width="66.33" height="16.35" fill="#5e6c84"/>
+<text x="402.50" y="348.65" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.013</text>
+<text x="402.50" y="388.00" transform="rotate(55 402.50 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">time_spent_at_sea_hours</text>
+<rect x="443.67" y="361.55" width="66.33" height="8.45" fill="#6f5e9c"/>
+<text x="476.83" y="356.55" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.007</text>
+<text x="476.83" y="388.00" transform="rotate(55 476.83 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">monitoring_method_c</text>
+<rect x="518.00" y="362.10" width="66.33" height="7.90" fill="#2f6f73"/>
+<text x="551.17" y="357.10" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.006</text>
+<text x="551.17" y="388.00" transform="rotate(55 551.17 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">has_ice_class</text>
+<rect x="592.33" y="365.32" width="66.33" height="4.68" fill="#8f5f2a"/>
+<text x="625.50" y="360.32" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.004</text>
+<text x="625.50" y="388.00" transform="rotate(55 625.50 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">monitoring_method_b</text>
+<rect x="666.67" y="368.11" width="66.33" height="1.89" fill="#4f6f9f"/>
+<text x="699.83" y="363.11" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.002</text>
+<text x="699.83" y="388.00" transform="rotate(55 699.83 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">monitoring_method_a</text>
+<rect x="741.00" y="369.38" width="66.33" height="0.62" fill="#a64d4d"/>
+<text x="774.17" y="364.38" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.001</text>
+<text x="774.17" y="388.00" transform="rotate(55 774.17 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">technical_efficiency_is_not_appli…</text>
+<rect x="815.33" y="369.70" width="66.33" height="0.30" fill="#5e6c84"/>
+<text x="848.50" y="364.70" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.000</text>
+<text x="848.50" y="388.00" transform="rotate(55 848.50 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">time_spent_at_sea_through_ice_hou…</text>
+<rect x="889.67" y="370.00" width="66.33" height="0.00" fill="#6f5e9c"/>
+<text x="922.83" y="365.00" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.000</text>
+<text x="922.83" y="388.00" transform="rotate(55 922.83 388.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">reporting_year</text>
+</svg>

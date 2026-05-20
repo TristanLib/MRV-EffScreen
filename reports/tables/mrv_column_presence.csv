@@ -1,0 +1,147 @@
+normalized_field,sheet_count,sheets
+annual_monitoring_results__additional_information_to_facilitate_the_understanding_of_the_reported_average_operational_energy_efficiency_indicators,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__annual_average_co2_emissions_per_distance,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_co2_emissions_per_transport_work_dwt,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_co2_emissions_per_transport_work_freight,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_co2_emissions_per_transport_work_mass,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_co2_emissions_per_transport_work_pax,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_co2_emissions_per_transport_work_volume,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_fuel_consumption_per_distance,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_fuel_consumption_per_transport_work_dwt,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_fuel_consumption_per_transport_work_freight,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_fuel_consumption_per_transport_work_mass,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_fuel_consumption_per_transport_work_pax,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_average_fuel_consumption_per_transport_work_volume,6,2018; 2019; 2020; 2021; 2022; 2023
+annual_monitoring_results__annual_time_spent_at_sea,4,2020; 2021; 2022; 2023
+annual_monitoring_results__annual_total_time_spent_at_sea,2,2018; 2019
+annual_monitoring_results__average_density_of_the_cargo_transported,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_assigned_to_freight_transport,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_assigned_to_on_laden,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_assigned_to_passenger_transport,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_from_all_voyages_between_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_from_all_voyages_to_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_from_all_voyages_which_departed_from_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_to_be_reported_under_directive_2003_87_ec,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_which_occurred_within_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__ch4_emissions_which_occurred_within_ports_under_a_ms_jurisdiction_at_berth,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_assigned_to_freight_transport,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_assigned_to_on_laden,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_assigned_to_passenger_transport,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_from_all_voyages_between_ports_under_a_ms_jurisdiction,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_from_all_voyages_to_ports_under_a_ms_jurisdiction,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_from_all_voyages_which_departed_from_ports_under_a_ms_jurisdiction,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_distance,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_distance_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_time_spent_at_sea,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_dwt,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_dwt_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_freight,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_freight_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_mass,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_mass_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_pax,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_pax_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_volume,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_per_transport_work_volume_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_to_be_reported_under_directive_2003_87_ec,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_which_occurred_within_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2_emissions_which_occurred_within_ports_under_a_ms_jurisdiction_at_berth,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_assigned_to_freight_transport,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_assigned_to_on_laden,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_assigned_to_passenger_transport,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_benefitting_from_a_derogation_in_accordance_with_part_c_point_1_2_of_annex_ii_to_regulation_eu_2015_757_voluntary,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_from_all_voyages_between_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_from_all_voyages_to_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_from_all_voyages_which_departed_from_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_distance,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_distance_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_time_spent_at_sea,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_dwt,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_dwt_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_freight,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_freight_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_mass,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_mass_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_pax,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_pax_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_volume,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_per_transport_work_volume_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_to_be_reported_under_directive_2003_87_ec,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_which_occurred_within_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__co2eq_emissions_which_occurred_within_ports_under_a_ms_jurisdiction_at_berth,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__distance_through_ice,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_distance,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_distance_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_time_spent_at_sea,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_dwt,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_dwt_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_freight,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_freight_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_mass,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_mass_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_pax,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_pax_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_volume,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumption_per_transport_work_volume_on_laden_voyages,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumptions_assigned_to_cargo_heating,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumptions_assigned_to_dynamic_positioning,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__fuel_consumptions_assigned_to_on_laden,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_assigned_to_freight_transport,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_assigned_to_on_laden,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_assigned_to_passenger_transport,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_from_all_voyages_between_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_from_all_voyages_to_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_from_all_voyages_which_departed_from_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_to_be_reported_under_directive_2003_87_ec,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_which_occurred_within_ports_under_a_ms_jurisdiction,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__n2o_emissions_which_occurred_within_ports_under_a_ms_jurisdiction_at_berth,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__time_spent_at_sea,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__time_spent_at_sea_through_ice,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__total_ch4_emissions,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__total_co2_emissions,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__total_co2eq_emissions,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__total_fuel_benefitting_from_a_derogation_in_accordance_with_part_c_point_1_2_of_annex_ii_to_regulation_eu_2015_757_voluntary,2,2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__total_fuel_consumption,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+annual_monitoring_results__total_n2o_emissions,2,2024 Full ERs; 2024 Partial ERs
+company__imo_number,2,2024 Full ERs; 2024 Partial ERs
+company__name,2,2024 Full ERs; 2024 Partial ERs
+doc__doc_expiry_date,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+doc__doc_issue_date,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+monitoring_methods__a,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+monitoring_methods__b,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+monitoring_methods__c,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+monitoring_methods__d,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+monitoring_methods__d_2,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__home_port,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__ice_class,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__imo_number,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__name,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__port_of_registry,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__reporting_period,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__ship_type,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+ship__technical_efficiency,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+verifier__verifier_accreditation_number,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+verifier__verifier_address,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+verifier__verifier_city,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+verifier__verifier_country,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+verifier__verifier_nab,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+verifier__verifier_name,8,2018; 2019; 2020; 2021; 2022; 2023; 2024 Full ERs; 2024 Partial ERs
+verifier__verifier_number,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__additional_information_to_facilitate_the_understanding_of_the_reported_average_operational_energy_efficiency_indicators,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__average_density_of_the_cargo_transported,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__co2_emissions_per_distance_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__co2_emissions_per_transport_work_dwt_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__co2_emissions_per_transport_work_freight_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__co2_emissions_per_transport_work_mass_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__co2_emissions_per_transport_work_pax_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__co2_emissions_per_transport_work_volume_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__fuel_consumption_per_distance_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__fuel_consumption_per_transport_work_dwt_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__fuel_consumption_per_transport_work_freight_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__fuel_consumption_per_transport_work_mass_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__fuel_consumption_per_transport_work_pax_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__fuel_consumption_per_transport_work_volume_on_laden_voyages,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__through_ice,6,2018; 2019; 2020; 2021; 2022; 2023
+voluntary_reporting__time_spent_at_sea,4,2020; 2021; 2022; 2023
+voluntary_reporting__total_time_spent_at_sea,2,2018; 2019
+voluntary_reporting__total_time_spent_at_sea_through_ice,6,2018; 2019; 2020; 2021; 2022; 2023

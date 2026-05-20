@@ -1,0 +1,15 @@
+ship_type,top_candidate_rows,share_of_top_candidates
+Bulk carrier,59,0.295000
+Oil tanker,35,0.175000
+General cargo ship,22,0.110000
+Chemical tanker,19,0.095000
+Container ship,17,0.085000
+Ro-pax ship,11,0.055000
+Vehicle carrier,11,0.055000
+Other ship types,6,0.030000
+LNG carrier,5,0.025000
+Container/ro-ro cargo ship,5,0.025000
+Gas carrier,3,0.015000
+Ro-ro ship,3,0.015000
+Refrigerated cargo carrier,3,0.015000
+Passenger ship,1,0.005000

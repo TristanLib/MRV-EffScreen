@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" fill="#1f2933">Temporal vs random Macro-F1</text>
+<text x="18" y="202.0" transform="rotate(-90 18 202.0)" text-anchor="middle" font-family="Arial" font-size="12" fill="#52606d">macro f1</text>
+<line x1="72" y1="350" x2="1076" y2="350" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="72" y1="54" x2="72" y2="350" stroke="#9aa5b1" stroke-width="1"/>
+<line x1="68" y1="350.00" x2="1076" y2="350.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="354.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.00</text>
+<line x1="68" y1="290.80" x2="1076" y2="290.80" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="294.80" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.15</text>
+<line x1="68" y1="231.60" x2="1076" y2="231.60" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="235.60" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.29</text>
+<line x1="68" y1="172.40" x2="1076" y2="172.40" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="176.40" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.44</text>
+<line x1="68" y1="113.20" x2="1076" y2="113.20" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="117.20" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.59</text>
+<line x1="68" y1="54.00" x2="1076" y2="54.00" stroke="#e4e7eb" stroke-width="1"/>
+<text x="64" y="58.00" text-anchor="end" font-family="Arial" font-size="11" fill="#52606d">0.74</text>
+<rect x="72.00" y="86.65" width="76.33" height="263.35" fill="#2f6f73"/>
+<text x="110.17" y="81.65" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.655</text>
+<text x="110.17" y="368.00" transform="rotate(55 110.17 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">random | operational no emission …</text>
+<rect x="156.33" y="178.56" width="76.33" height="171.44" fill="#8f5f2a"/>
+<text x="194.50" y="173.56" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.426</text>
+<text x="194.50" y="368.00" transform="rotate(55 194.50 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">random | operational no emission …</text>
+<rect x="240.67" y="108.00" width="76.33" height="242.00" fill="#4f6f9f"/>
+<text x="278.83" y="103.00" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.602</text>
+<text x="278.83" y="368.00" transform="rotate(55 278.83 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">random | operational no emission …</text>
+<rect x="325.00" y="85.71" width="76.33" height="264.29" fill="#a64d4d"/>
+<text x="363.17" y="80.71" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.657</text>
+<text x="363.17" y="368.00" transform="rotate(55 363.17 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">random | strict static | hist gra…</text>
+<rect x="409.33" y="176.50" width="76.33" height="173.50" fill="#5e6c84"/>
+<text x="447.50" y="171.50" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.431</text>
+<text x="447.50" y="368.00" transform="rotate(55 447.50 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">random | strict static | logistic…</text>
+<rect x="493.67" y="109.08" width="76.33" height="240.92" fill="#6f5e9c"/>
+<text x="531.83" y="104.08" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.599</text>
+<text x="531.83" y="368.00" transform="rotate(55 531.83 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">random | strict static | random f…</text>
+<rect x="578.00" y="107.32" width="76.33" height="242.68" fill="#2f6f73"/>
+<text x="616.17" y="102.32" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.603</text>
+<text x="616.17" y="368.00" transform="rotate(55 616.17 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">temporal | operational no emissio…</text>
+<rect x="662.33" y="182.03" width="76.33" height="167.97" fill="#8f5f2a"/>
+<text x="700.50" y="177.03" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.417</text>
+<text x="700.50" y="368.00" transform="rotate(55 700.50 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">temporal | operational no emissio…</text>
+<rect x="746.67" y="124.89" width="76.33" height="225.11" fill="#4f6f9f"/>
+<text x="784.83" y="119.89" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.560</text>
+<text x="784.83" y="368.00" transform="rotate(55 784.83 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">temporal | operational no emissio…</text>
+<rect x="831.00" y="108.03" width="76.33" height="241.97" fill="#a64d4d"/>
+<text x="869.17" y="103.03" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.601</text>
+<text x="869.17" y="368.00" transform="rotate(55 869.17 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">temporal | strict static | hist g…</text>
+<rect x="915.33" y="181.74" width="76.33" height="168.26" fill="#5e6c84"/>
+<text x="953.50" y="176.74" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.418</text>
+<text x="953.50" y="368.00" transform="rotate(55 953.50 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">temporal | strict static | logist…</text>
+<rect x="999.67" y="126.48" width="76.33" height="223.52" fill="#6f5e9c"/>
+<text x="1037.83" y="121.48" text-anchor="middle" font-family="Arial" font-size="10" fill="#323f4b">0.556</text>
+<text x="1037.83" y="368.00" transform="rotate(55 1037.83 368.00)" text-anchor="start" font-family="Arial" font-size="9" fill="#323f4b">temporal | strict static | random…</text>
+</svg>

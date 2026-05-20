@@ -1,0 +1,21 @@
+analysis,rank,item,value,secondary_value,interpretation
+permutation_importance,1,technical_efficiency_value,0.228348,0.005408,Macro-F1 drop after feature permutation
+permutation_importance,2,ship_type,0.164429,0.005402,Macro-F1 drop after feature permutation
+permutation_importance,3,technical_efficiency_type,0.061719,0.002841,Macro-F1 drop after feature permutation
+permutation_importance,4,port_of_registry,0.024154,0.001670,Macro-F1 drop after feature permutation
+permutation_importance,5,time_spent_at_sea_hours,0.013235,0.001212,Macro-F1 drop after feature permutation
+permutation_importance,6,monitoring_method_c,0.006838,0.001533,Macro-F1 drop after feature permutation
+permutation_importance,7,has_ice_class,0.006393,0.001107,Macro-F1 drop after feature permutation
+permutation_importance,8,monitoring_method_b,0.003785,0.000492,Macro-F1 drop after feature permutation
+permutation_importance,9,monitoring_method_a,0.001528,0.001048,Macro-F1 drop after feature permutation
+permutation_importance,10,technical_efficiency_is_not_applicable,0.000502,0.000319,Macro-F1 drop after feature permutation
+medium_error,1,Bulk carrier medium -> efficient,339,,Most frequent temporal-test medium-class error pattern
+medium_error,2,Container ship medium -> inefficient,261,,Most frequent temporal-test medium-class error pattern
+medium_error,3,General cargo ship medium -> inefficient,176,,Most frequent temporal-test medium-class error pattern
+medium_error,4,Bulk carrier medium -> inefficient,169,,Most frequent temporal-test medium-class error pattern
+medium_error,5,Container ship medium -> efficient,161,,Most frequent temporal-test medium-class error pattern
+medium_error,6,Chemical tanker medium -> efficient,155,,Most frequent temporal-test medium-class error pattern
+medium_error,7,Oil tanker medium -> efficient,136,,Most frequent temporal-test medium-class error pattern
+medium_error,8,LNG carrier medium -> efficient,96,,Most frequent temporal-test medium-class error pattern
+medium_error,9,General cargo ship medium -> efficient,92,,Most frequent temporal-test medium-class error pattern
+medium_error,10,Other ship types medium -> efficient,75,,Most frequent temporal-test medium-class error pattern

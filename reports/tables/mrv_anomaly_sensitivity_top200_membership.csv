@@ -1,0 +1,201 @@
+consensus_rank,ship_type,reporting_year,report_scope,imo_number,ship_name,efficiency_label_distance,consensus_score,flags_1pct,at_least_two_1pct,all_three_1pct,flags_2pct,at_least_two_2pct,all_three_2pct,flags_5pct,at_least_two_5pct,all_three_5pct
+1,Passenger ship,2023,annual_er,9273727,BIRKA GOTLAND,inefficient,1.000000,3,true,true,3,true,true,3,true,true
+2,General cargo ship,2024,full_er,9469780,PACIFIC INTEGRITY,inefficient,0.999844,3,true,true,3,true,true,3,true,true
+3,Bulk carrier,2024,full_er,9403138,EURO BAND,efficient,0.999828,3,true,true,3,true,true,3,true,true
+4,Bulk carrier,2018,annual_er,9742209,STELLA HOPE,inefficient,0.999523,3,true,true,3,true,true,3,true,true
+5,Container ship,2023,annual_er,9775737,VISTULA MAERSK,efficient,0.999438,3,true,true,3,true,true,3,true,true
+6,Bulk carrier,2024,full_er,9498236,SUNDA,inefficient,0.999391,3,true,true,3,true,true,3,true,true
+7,General cargo ship,2019,annual_er,9763837,AUDAX,inefficient,0.999336,3,true,true,3,true,true,3,true,true
+8,Ro-pax ship,2023,annual_er,8919805,SILJA EUROPA,inefficient,0.999283,3,true,true,3,true,true,3,true,true
+9,General cargo ship,2020,annual_er,8972259,LEONID ZAYAKIN,efficient,0.999258,3,true,true,3,true,true,3,true,true
+10,LNG carrier,2024,full_er,9239616,EXCELSIOR,inefficient,0.999225,3,true,true,3,true,true,3,true,true
+11,General cargo ship,2024,full_er,9356957,VUSAL MAHARRAMOV,inefficient,0.999180,3,true,true,3,true,true,3,true,true
+12,Oil tanker,2024,full_er,9853852,NISSOS KYTHNOS,inefficient,0.999124,3,true,true,3,true,true,3,true,true
+13,Bulk carrier,2024,full_er,9590852,BERGE MCCLINTOCK,inefficient,0.999087,3,true,true,3,true,true,3,true,true
+14,General cargo ship,2018,annual_er,9228394,ATALANTA,inefficient,0.998946,3,true,true,3,true,true,3,true,true
+15,General cargo ship,2022,annual_er,9697337,TIMGAD,inefficient,0.998946,3,true,true,3,true,true,3,true,true
+16,Bulk carrier,2023,annual_er,9479058,IKAN SELIGI,inefficient,0.998822,3,true,true,3,true,true,3,true,true
+17,Ro-pax ship,2024,full_er,9237589,ROMANTIKA,inefficient,0.998685,3,true,true,3,true,true,3,true,true
+18,Oil tanker,2022,annual_er,9222132,GLADIATOR,inefficient,0.998473,3,true,true,3,true,true,3,true,true
+19,Other ship types,2019,annual_er,9621704,PACIFIC OSPREY,inefficient,0.998402,3,true,true,3,true,true,3,true,true
+20,Oil tanker,2020,annual_er,9229013,LUCY PG,inefficient,0.998373,3,true,true,3,true,true,3,true,true
+21,Oil tanker,2024,full_er,9312444,PRESIDENT I,inefficient,0.998373,3,true,true,3,true,true,3,true,true
+22,Oil tanker,2024,full_er,9445461,OLYMPIC TROPHY,inefficient,0.998373,3,true,true,3,true,true,3,true,true
+23,Gas carrier,2021,annual_er,9131539,GAZ LIBERTY,inefficient,0.998298,3,true,true,3,true,true,3,true,true
+24,LNG carrier,2023,annual_er,9230048,SEAPEAK HISPANIA,inefficient,0.998295,3,true,true,3,true,true,3,true,true
+25,Oil tanker,2018,annual_er,9240201,PETROPORT,inefficient,0.998197,3,true,true,3,true,true,3,true,true
+26,Bulk carrier,2024,full_er,9591686,DARYA GAYATRI,inefficient,0.998001,3,true,true,3,true,true,3,true,true
+27,Oil tanker,2021,annual_er,9145413,ICARUS III,inefficient,0.997922,3,true,true,3,true,true,3,true,true
+28,Bulk carrier,2020,annual_er,9785603,FARAH LOUISE,efficient,0.997842,3,true,true,3,true,true,3,true,true
+29,Bulk carrier,2019,annual_er,9782314,ILEKTRA,inefficient,0.997803,3,true,true,3,true,true,3,true,true
+30,Vehicle carrier,2019,annual_er,9777802,BELUGA ACE,efficient,0.997597,3,true,true,3,true,true,3,true,true
+31,Oil tanker,2018,annual_er,9308223,HELEN M,efficient,0.997546,3,true,true,3,true,true,3,true,true
+32,Oil tanker,2022,annual_er,9251652,SEALING,inefficient,0.997546,3,true,true,3,true,true,3,true,true
+33,Bulk carrier,2024,full_er,9724740,SKYWALKER,inefficient,0.997472,3,true,true,3,true,true,3,true,true
+34,Container ship,2023,annual_er,9775751,VAYENGA MAERSK,efficient,0.997371,3,true,true,3,true,true,3,true,true
+35,Bulk carrier,2024,full_er,9336000,SEVA,inefficient,0.997273,3,true,true,3,true,true,3,true,true
+36,Ro-pax ship,2023,annual_er,7911533,MOBY DADA,inefficient,0.997251,3,true,true,3,true,true,3,true,true
+37,Bulk carrier,2018,annual_er,9497438,VEGA MARS,efficient,0.997234,3,true,true,3,true,true,3,true,true
+38,Container/ro-ro cargo ship,2018,annual_er,9186194,NORSTREAM,inefficient,0.997211,3,true,true,3,true,true,3,true,true
+39,Bulk carrier,2023,annual_er,9392729,VEGA STETIND,inefficient,0.997181,3,true,true,3,true,true,3,true,true
+40,Oil tanker,2023,annual_er,9173032,LEOPOLD,efficient,0.997121,3,true,true,3,true,true,3,true,true
+41,Ro-pax ship,2023,annual_er,9769219,BASTØ VI,efficient,0.997012,3,true,true,3,true,true,3,true,true
+42,Bulk carrier,2024,full_er,9712204,TIGER HEBEI,efficient,0.996969,3,true,true,3,true,true,3,true,true
+43,Oil tanker,2024,full_er,9251652,SEALING,inefficient,0.996945,3,true,true,3,true,true,3,true,true
+44,Oil tanker,2022,annual_er,9240201,PETROPORT,inefficient,0.996845,3,true,true,3,true,true,3,true,true
+45,Container ship,2018,annual_er,9162681,ALASA,inefficient,0.996784,3,true,true,3,true,true,3,true,true
+46,Bulk carrier,2021,annual_er,9605097,PACIFIC CYPRESS,inefficient,0.996731,3,true,true,3,true,true,3,true,true
+47,Oil tanker,2019,annual_er,9240201,PETROPORT,inefficient,0.996670,3,true,true,3,true,true,3,true,true
+48,Ro-ro ship,2018,annual_er,9203605,AYSHE,inefficient,0.996659,3,true,true,3,true,true,3,true,true
+49,Bulk carrier,2018,annual_er,9675602,KYPROS SEA,efficient,0.996492,3,true,true,3,true,true,3,true,true
+50,General cargo ship,2020,annual_er,9307358,TIMCA,inefficient,0.996486,3,true,true,3,true,true,3,true,true
+51,Oil tanker,2018,annual_er,9394727,ASPHALT SPRING,efficient,0.996395,3,true,true,3,true,true,3,true,true
+52,Bulk carrier,2018,annual_er,9349978,BURAK DEVAL,efficient,0.996347,3,true,true,3,true,true,3,true,true
+53,Oil tanker,2020,annual_er,9240201,PETROPORT,inefficient,0.996294,3,true,true,3,true,true,3,true,true
+54,Bulk carrier,2024,full_er,9929015,BBG HONG KONG,inefficient,0.996294,3,true,true,3,true,true,3,true,true
+55,Bulk carrier,2024,full_er,9848132,YASA JUPITER,inefficient,0.996281,3,true,true,3,true,true,3,true,true
+56,Oil tanker,2020,annual_er,9145413,ICARUS III,inefficient,0.996194,3,true,true,3,true,true,3,true,true
+57,General cargo ship,2024,full_er,9473688,HANDY HEIDI,inefficient,0.996174,3,true,true,3,true,true,3,true,true
+58,Chemical tanker,2019,annual_er,9448891,VEMAHONESTY,efficient,0.996167,3,true,true,3,true,true,3,true,true
+59,Container ship,2024,full_er,9809203,ZHONG GU PENG LAI,efficient,0.996094,3,true,true,3,true,true,3,true,true
+60,Oil tanker,2022,annual_er,9145413,ICARUS III,inefficient,0.996094,3,true,true,3,true,true,3,true,true
+61,Bulk carrier,2020,annual_er,9200574,LADY SPERANZA,efficient,0.996082,3,true,true,3,true,true,3,true,true
+62,General cargo ship,2019,annual_er,9307358,TIMCA,inefficient,0.996056,3,true,true,3,true,true,3,true,true
+63,Bulk carrier,2019,annual_er,9602784,GEMMA,inefficient,0.996042,3,true,true,3,true,true,3,true,true
+64,Chemical tanker,2019,annual_er,9247388,APATYTH,inefficient,0.996028,3,true,true,3,true,true,3,true,true
+65,Refrigerated cargo carrier,2018,annual_er,9230995,CARLOS FISCHER,inefficient,0.996020,3,true,true,3,true,true,3,true,true
+66,Container ship,2018,annual_er,9306471,STRAUSS,efficient,0.995941,3,true,true,3,true,true,3,true,true
+67,Ro-pax ship,2022,annual_er,8700723,ISABELLE,inefficient,0.995936,3,true,true,3,true,true,3,true,true
+68,Oil tanker,2024,full_er,9855331,FRONT EIRA,inefficient,0.995869,3,true,true,3,true,true,3,true,true
+69,Oil tanker,2024,full_er,9236353,BLUE,inefficient,0.995819,2,true,false,3,true,true,3,true,true
+70,General cargo ship,2018,annual_er,9307358,TIMCA,inefficient,0.995744,3,true,true,3,true,true,3,true,true
+71,Container ship,2023,annual_er,9946867,MSC VICTORINE,inefficient,0.995737,3,true,true,3,true,true,3,true,true
+72,Oil tanker,2020,annual_er,9249324,A SYMPHONY,inefficient,0.995643,3,true,true,3,true,true,3,true,true
+73,Gas carrier,2020,annual_er,9625140,CORAL ANTHELIA,efficient,0.995603,2,true,false,3,true,true,3,true,true
+74,Bulk carrier,2023,annual_er,9861160,FRANZ SCHULTE,efficient,0.995513,3,true,true,3,true,true,3,true,true
+75,Bulk carrier,2022,annual_er,9229879,REK NOBLE,medium,0.995500,3,true,true,3,true,true,3,true,true
+76,Oil tanker,2018,annual_er,9145413,ICARUS III,inefficient,0.995393,3,true,true,3,true,true,3,true,true
+77,Ro-pax ship,2021,annual_er,9007128,AURORA AF HELSINGBORG,efficient,0.995339,3,true,true,3,true,true,3,true,true
+78,Oil tanker,2018,annual_er,9176929,ANNELEEN KNUTSEN,inefficient,0.995268,3,true,true,3,true,true,3,true,true
+79,Bulk carrier,2018,annual_er,9602784,GEMMA,inefficient,0.995182,3,true,true,3,true,true,3,true,true
+80,Chemical tanker,2019,annual_er,9580974,ADFINES STAR,inefficient,0.995087,2,true,false,3,true,true,3,true,true
+81,Gas carrier,2022,annual_er,9909285,GAS VITALITY,inefficient,0.995035,3,true,true,3,true,true,3,true,true
+82,Bulk carrier,2024,full_er,9305659,HYUNDAI BUSAN,inefficient,0.995023,3,true,true,3,true,true,3,true,true
+83,Other ship types,2019,annual_er,9648788,GOLDEN ODYSSEY,inefficient,0.994977,3,true,true,3,true,true,3,true,true
+84,Chemical tanker,2020,annual_er,9247388,APATYTH,inefficient,0.994913,3,true,true,3,true,true,3,true,true
+85,Bulk carrier,2023,annual_er,8202018,IRON DESTINY,inefficient,0.994851,2,true,false,3,true,true,3,true,true
+86,Container ship,2024,full_er,9103374,MEDKON IZMIR,efficient,0.994818,2,true,false,3,true,true,3,true,true
+87,Vehicle carrier,2022,annual_er,9427964,PARANA,efficient,0.994775,2,true,false,3,true,true,3,true,true
+88,Bulk carrier,2020,annual_er,9225043,SCARLET LADY,inefficient,0.994732,2,true,false,3,true,true,3,true,true
+89,Oil tanker,2020,annual_er,9187239,CAPE BALDER,inefficient,0.994592,2,true,false,3,true,true,3,true,true
+90,Bulk carrier,2022,annual_er,9642368,ATLAS,inefficient,0.994573,2,true,false,3,true,true,3,true,true
+91,Bulk carrier,2020,annual_er,8202018,IRON DESTINY,inefficient,0.994560,3,true,true,3,true,true,3,true,true
+92,Other ship types,2018,annual_er,9621704,PACIFIC OSPREY,inefficient,0.994521,3,true,true,3,true,true,3,true,true
+93,Vehicle carrier,2022,annual_er,9491898,PATARA,efficient,0.994357,2,true,false,3,true,true,3,true,true
+94,General cargo ship,2022,annual_er,9307358,TIMCA,inefficient,0.994221,3,true,true,3,true,true,3,true,true
+95,Vehicle carrier,2018,annual_er,9210438,PLATINUM RAY,inefficient,0.994148,3,true,true,3,true,true,3,true,true
+96,Chemical tanker,2022,annual_er,9670949,BAGHEERA,inefficient,0.994147,2,true,false,3,true,true,3,true,true
+97,Container ship,2018,annual_er,9302097,GLEN CANYON BRIDGE,efficient,0.994129,2,true,false,3,true,true,3,true,true
+98,Other ship types,2018,annual_er,9601326,PACIFIC ORCA,inefficient,0.994064,2,true,false,3,true,true,3,true,true
+99,Oil tanker,2021,annual_er,9292163,FRONT FORCE,inefficient,0.994016,3,true,true,3,true,true,3,true,true
+100,Bulk carrier,2018,annual_er,9557874,EAST TRADER,inefficient,0.993911,3,true,true,3,true,true,3,true,true
+101,Ro-ro ship,2018,annual_er,9209453,CATHERINE,inefficient,0.993907,2,true,false,3,true,true,3,true,true
+102,Other ship types,2022,annual_er,9618783,BOKA VANGUARD,inefficient,0.993836,2,true,false,3,true,true,3,true,true
+103,General cargo ship,2024,full_er,9386146,CHELSEA-4,efficient,0.993792,2,true,false,3,true,true,3,true,true
+104,Container/ro-ro cargo ship,2018,annual_er,8818764,NORRLAND,efficient,0.993724,2,true,false,3,true,true,3,true,true
+105,Ro-pax ship,2022,annual_er,9281281,VICTORIA I,inefficient,0.993666,2,true,false,3,true,true,3,true,true
+106,LNG carrier,2021,annual_er,9750024,GREEN ZEEBRUGGE,inefficient,0.993646,2,true,false,3,true,true,3,true,true
+107,Oil tanker,2022,annual_er,9417751,LIA,efficient,0.993640,3,true,true,3,true,true,3,true,true
+108,Bulk carrier,2018,annual_er,9505833,E.R. BRANDENBURG,inefficient,0.993554,2,true,false,3,true,true,3,true,true
+109,Bulk carrier,2022,annual_er,9703813,BEN WYVIS,inefficient,0.993554,2,true,false,3,true,true,3,true,true
+110,Container ship,2024,full_er,9103350,MEDKON GEMLIK,efficient,0.993542,2,true,false,3,true,true,3,true,true
+111,Oil tanker,2024,full_er,9916147,HERCULES SUN,inefficient,0.993365,3,true,true,3,true,true,3,true,true
+112,General cargo ship,2021,annual_er,9307358,TIMCA,inefficient,0.993362,3,true,true,3,true,true,3,true,true
+113,Bulk carrier,2018,annual_er,9224099,GEORGIA K,efficient,0.993302,2,true,false,3,true,true,3,true,true
+114,Oil tanker,2018,annual_er,9823821,PROFESSOR AZIZ ALIYEV,efficient,0.993290,3,true,true,3,true,true,3,true,true
+115,Bulk carrier,2018,annual_er,9595046,TRABZON,inefficient,0.993289,2,true,false,3,true,true,3,true,true
+116,Chemical tanker,2018,annual_er,9334428,LS JACOBA,inefficient,0.993241,2,true,false,3,true,true,3,true,true
+117,Container ship,2018,annual_er,9322865,ASIATIC GLORY,efficient,0.993235,3,true,true,3,true,true,3,true,true
+118,General cargo ship,2020,annual_er,9235359,YU CHANG,inefficient,0.993206,2,true,false,3,true,true,3,true,true
+119,Ro-pax ship,2021,annual_er,7382378,GIUSEPPE SA,inefficient,0.993188,3,true,true,3,true,true,3,true,true
+120,Ro-pax ship,2022,annual_er,7813949,EUROPEAN STAR,inefficient,0.993188,2,true,false,3,true,true,3,true,true
+121,Bulk carrier,2021,annual_er,9146053,NECO K,efficient,0.993144,2,true,false,3,true,true,3,true,true
+122,Bulk carrier,2018,annual_er,9365049,ESTESTAR,efficient,0.993104,3,true,true,3,true,true,3,true,true
+123,Container ship,2024,full_er,9103386,MEDKON ISTANBUL,efficient,0.993082,2,true,false,3,true,true,3,true,true
+124,Chemical tanker,2019,annual_er,9340386,SUNBEAM,inefficient,0.993066,2,true,false,3,true,true,3,true,true
+125,Chemical tanker,2023,annual_er,9585481,HERCULES SKY,inefficient,0.992962,2,true,false,3,true,true,3,true,true
+126,Chemical tanker,2021,annual_er,9247388,APATYTH,inefficient,0.992927,2,true,false,3,true,true,3,true,true
+127,Bulk carrier,2019,annual_er,9339478,ROYAL EPIC,inefficient,0.992892,2,true,false,3,true,true,3,true,true
+128,Vehicle carrier,2024,full_er,9473456,CITY OF ST. PETERSBURG,efficient,0.992790,2,true,false,3,true,true,3,true,true
+129,Refrigerated cargo carrier,2018,annual_er,9242089,PREMIUM DO BRASIL,inefficient,0.992703,2,true,false,3,true,true,3,true,true
+130,Other ship types,2019,annual_er,9601326,PACIFIC ORCA,inefficient,0.992694,2,true,false,3,true,true,3,true,true
+131,Bulk carrier,2021,annual_er,9703825,BEN RINNES,efficient,0.992680,2,true,false,3,true,true,3,true,true
+132,General cargo ship,2021,annual_er,9037276,BEATA,inefficient,0.992659,2,true,false,3,true,true,3,true,true
+133,Container ship,2018,annual_er,9371971,MCP FAMAGUSTA,efficient,0.992648,2,true,false,3,true,true,3,true,true
+134,Bulk carrier,2021,annual_er,9690509,WP AMBITION,efficient,0.992588,3,true,true,3,true,true,3,true,true
+135,Vehicle carrier,2018,annual_er,9285641,MORNING CROWN,efficient,0.992581,2,true,false,3,true,true,3,true,true
+136,Bulk carrier,2018,annual_er,9493731,VEGA TAURUS,efficient,0.992535,2,true,false,3,true,true,3,true,true
+137,Bulk carrier,2021,annual_er,9875630,EMERALD ETERNITY,inefficient,0.992521,2,true,false,3,true,true,3,true,true
+138,Ro-pax ship,2023,annual_er,9878993,BASTØ ELECTRIC,efficient,0.992470,3,true,true,3,true,true,3,true,true
+139,Bulk carrier,2018,annual_er,9571040,ABDALA,inefficient,0.992429,2,true,false,3,true,true,3,true,true
+140,LNG carrier,2023,annual_er,9850680,GAS AGILITY,inefficient,0.992407,2,true,false,3,true,true,3,true,true
+141,Vehicle carrier,2019,annual_er,8611984,CENK CAR,efficient,0.992372,2,true,false,3,true,true,3,true,true
+142,Chemical tanker,2019,annual_er,9823390,LILY PG,efficient,0.992370,2,true,false,3,true,true,3,true,true
+143,Chemical tanker,2022,annual_er,9274537,SCOT FRANKFURT,inefficient,0.992370,2,true,false,3,true,true,3,true,true
+144,Bulk carrier,2018,annual_er,9400588,ESTESUN,efficient,0.992310,3,true,true,3,true,true,3,true,true
+145,Chemical tanker,2022,annual_er,9360441,VELOS TOPAZ,inefficient,0.992300,2,true,false,3,true,true,3,true,true
+146,Bulk carrier,2019,annual_er,8908868,TAILWIND,inefficient,0.992296,2,true,false,3,true,true,3,true,true
+147,Container ship,2024,full_er,9318931,ORITA,efficient,0.992189,2,true,false,3,true,true,3,true,true
+148,Chemical tanker,2021,annual_er,9382114,VS SALOME,inefficient,0.992126,2,true,false,3,true,true,3,true,true
+149,Vehicle carrier,2018,annual_er,9441556,HERITAGE LEADER,inefficient,0.992059,2,true,false,3,true,true,3,true,true
+150,Bulk carrier,2024,full_er,9762883,TRAMMO BAUMANN,inefficient,0.991965,2,true,false,2,true,false,3,true,true
+151,Bulk carrier,2018,annual_er,9718208,VITTORIA,inefficient,0.991952,1,false,false,3,true,true,3,true,true
+152,Ro-ro ship,2024,full_er,9473468,CITY OF ROTTERDAM,efficient,0.991745,2,true,false,2,true,false,3,true,true
+153,Chemical tanker,2018,annual_er,9742053,HALCON TRADER,inefficient,0.991708,1,false,false,3,true,true,3,true,true
+154,Bulk carrier,2020,annual_er,9602784,GEMMA,inefficient,0.991648,1,false,false,3,true,true,3,true,true
+155,Container/ro-ro cargo ship,2018,annual_er,8805602,LINK STAR,efficient,0.991632,2,true,false,3,true,true,3,true,true
+156,Chemical tanker,2024,full_er,9499371,JAY 2,inefficient,0.991603,2,true,false,3,true,true,3,true,true
+157,Chemical tanker,2018,annual_er,9847140,CHEMICAL CONTENDER,inefficient,0.991499,2,true,false,3,true,true,3,true,true
+158,General cargo ship,2020,annual_er,9763837,AUDAX,inefficient,0.991449,2,true,false,3,true,true,3,true,true
+159,General cargo ship,2022,annual_er,9763837,AUDAX,inefficient,0.991449,2,true,false,3,true,true,3,true,true
+160,General cargo ship,2023,annual_er,9380817,ZIMRIDA,inefficient,0.991410,2,true,false,3,true,true,3,true,true
+161,Bulk carrier,2022,annual_er,9815939,MEDI GINEVRA,inefficient,0.991410,2,true,false,3,true,true,3,true,true
+162,Oil tanker,2024,full_er,9292840,YELLOW TRADER,inefficient,0.991337,2,true,false,2,true,false,3,true,true
+163,Chemical tanker,2018,annual_er,9323560,LEON HERMES,inefficient,0.991324,2,true,false,3,true,true,3,true,true
+164,General cargo ship,2018,annual_er,9005429,NADA,inefficient,0.991137,2,true,false,3,true,true,3,true,true
+165,Bulk carrier,2023,annual_er,9305087,WINNER,inefficient,0.991065,2,true,false,3,true,true,3,true,true
+166,Container ship,2024,full_er,9139646,MEDKON LIA,efficient,0.991014,2,true,false,3,true,true,3,true,true
+167,Chemical tanker,2019,annual_er,9249116,ELKA ATHINA,inefficient,0.991011,2,true,false,3,true,true,3,true,true
+168,Oil tanker,2019,annual_er,9495832,TRIDENT KING,efficient,0.990986,2,true,false,3,true,true,3,true,true
+169,Container ship,2022,annual_er,9306067,CALISTO,efficient,0.990938,2,true,false,2,true,false,3,true,true
+170,Container/ro-ro cargo ship,2019,annual_er,9302176,HENRY HUDSON BRIDGE,inefficient,0.990934,1,false,false,3,true,true,3,true,true
+171,Bulk carrier,2024,full_er,9520821,AMAMI,inefficient,0.990920,1,false,false,3,true,true,3,true,true
+172,General cargo ship,2018,annual_er,9291963,BBC CAMPANA,inefficient,0.990902,2,true,false,3,true,true,3,true,true
+173,Bulk carrier,2018,annual_er,9683245,KSL SEATTLE,inefficient,0.990893,2,true,false,3,true,true,3,true,true
+174,Oil tanker,2019,annual_er,9292034,TOWER BRIDGE,inefficient,0.990711,2,true,false,2,true,false,3,true,true
+175,LNG carrier,2021,annual_er,9830903,AVENIR ACCOLADE,efficient,0.990547,2,true,false,2,true,false,3,true,true
+176,Oil tanker,2024,full_er,9878034,ARDMORE,medium,0.990460,1,false,false,3,true,true,3,true,true
+177,Oil tanker,2018,annual_er,9392808,ALPINE MYSTERY,efficient,0.990435,2,true,false,2,true,false,3,true,true
+178,Refrigerated cargo carrier,2021,annual_er,9167801,CERES TWO,inefficient,0.990381,2,true,false,3,true,true,3,true,true
+179,Bulk carrier,2024,full_er,9498561,AMILLA,efficient,0.990351,2,true,false,3,true,true,3,true,true
+180,Ro-pax ship,2022,annual_er,9631797,MESSINA,inefficient,0.990319,2,true,false,2,true,false,3,true,true
+181,Bulk carrier,2018,annual_er,9800398,SANTA CAROLINA,efficient,0.990311,2,true,false,2,true,false,3,true,true
+182,Bulk carrier,2022,annual_er,9492206,YUE MAY,inefficient,0.990284,1,false,false,3,true,true,3,true,true
+183,Vehicle carrier,2023,annual_er,9491898,PATARA,efficient,0.990282,2,true,false,2,true,false,3,true,true
+184,Bulk carrier,2024,full_er,9228241,FANARIA,efficient,0.990245,2,true,false,2,true,false,3,true,true
+185,Container/ro-ro cargo ship,2019,annual_er,9302152,HARBOUR BRIDGE,inefficient,0.990237,1,false,false,3,true,true,3,true,true
+186,Oil tanker,2022,annual_er,9506069,HAFNIA SHINANO,inefficient,0.990235,2,true,false,3,true,true,3,true,true
+187,Bulk carrier,2020,annual_er,9581368,DENSA PANTHER,inefficient,0.990218,2,true,false,2,true,false,3,true,true
+188,Bulk carrier,2020,annual_er,9151400,GANOSAYA,efficient,0.990218,2,true,false,3,true,true,3,true,true
+189,Chemical tanker,2019,annual_er,9508940,HINCH SPIRIT,inefficient,0.990209,2,true,false,3,true,true,3,true,true
+190,Oil tanker,2022,annual_er,9383950,STAR PROSPERITY,inefficient,0.990185,2,true,false,2,true,false,3,true,true
+191,General cargo ship,2024,full_er,9300623,ASL ELSA,inefficient,0.990160,2,true,false,2,true,false,3,true,true
+192,Bulk carrier,2019,annual_er,9146053,NECO K,efficient,0.990086,2,true,false,2,true,false,3,true,true
+193,Vehicle carrier,2018,annual_er,9441568,HARMONY LEADER,inefficient,0.990073,2,true,false,3,true,true,3,true,true
+194,Bulk carrier,2022,annual_er,9595369,RIA,inefficient,0.990059,2,true,false,2,true,false,3,true,true
+195,General cargo ship,2021,annual_er,9763849,PUGNAX,inefficient,0.990043,2,true,false,3,true,true,3,true,true
+196,Bulk carrier,2023,annual_er,9691412,JIN CHAO,inefficient,0.990020,2,true,false,2,true,false,3,true,true
+197,Container ship,2019,annual_er,9164275,MAERSK AVON,efficient,0.989993,2,true,false,2,true,false,3,true,true
+198,Vehicle carrier,2023,annual_er,9672404,GRAVITY HIGHWAY,inefficient,0.989969,1,false,false,3,true,true,3,true,true
+199,Oil tanker,2018,annual_er,9288899,TOLEDO SPIRIT,inefficient,0.989935,1,false,false,3,true,true,3,true,true
+200,Container ship,2024,full_er,9951551,CMA CGM AMBITION,medium,0.989815,1,false,false,3,true,true,3,true,true

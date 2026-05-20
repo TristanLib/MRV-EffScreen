@@ -1,0 +1,4 @@
+contamination,isolation_top_rows,lof_top_rows,residual_top_rows,isolation_lof_overlap,isolation_residual_overlap,lof_residual_overlap,all_three_methods,at_least_two_methods,any_method,top200_at_least_two_methods,top200_all_three_methods,jaccard_at_least_two_vs_2pct,jaccard_all_three_vs_2pct
+1.00%,865,865,865,153,229,299,97,487,2011,189,97,0.456420,0.429204
+2.00%,1727,1727,1727,398,575,546,226,1067,3888,200,182,1.000000,1.000000
+5.00%,4303,4303,4303,1173,1455,1284,643,2626,9640,200,200,0.406321,0.351477

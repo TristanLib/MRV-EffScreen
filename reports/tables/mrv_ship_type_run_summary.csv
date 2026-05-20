@@ -1,0 +1,9 @@
+metric,value
+top_ship_types,Bulk carrier; Oil tanker; Container ship; Chemical tanker; General cargo ship
+best_test_train_scope,ship_type_model
+best_test_ship_type,Oil tanker
+best_test_feature_set,strict_static
+best_test_macro_f1,0.686842
+best_test_balanced_accuracy,0.689133
+top_permutation_feature,technical_efficiency_value
+top_permutation_macro_f1_drop,0.228348

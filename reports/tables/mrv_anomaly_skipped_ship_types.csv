@@ -1,0 +1,4 @@
+ship_type,eligible_rows,reason
+Combination carrier,69,below_min_ship_type_rows
+Other ship types (Offshore),6,below_min_ship_type_rows
+Passenger ship (Cruise Passenger ship),28,below_min_ship_type_rows

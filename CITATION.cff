@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use MRV-EffScreen, please cite the project repository and the associated paper when available."
+title: "MRV-EffScreen: Public THETIS-MRV Ship Energy-Efficiency Stratification and Consistency Screening"
+type: software
+version: 0.1.0
+date-released: 2026-05-20
+repository-code: "https://github.com/TristanLib/MRV-EffScreen"
+url: "https://github.com/TristanLib/MRV-EffScreen"
+authors:
+  - family-names: "Li"
+    given-names: "Bo"
+    orcid: "https://orcid.org/0009-0002-0772-5138"
+keywords:
+  - maritime emissions
+  - THETIS-MRV
+  - ship energy efficiency
+  - consistency screening
+  - machine learning
+abstract: "MRV-EffScreen is a reproducible research codebase for ship energy-efficiency stratification and emission-consistency screening using public EU THETIS-MRV emission reports."

@@ -1,0 +1,12 @@
+metric,value
+all_processed_rows,90745
+eligible_full_year_rows,86035
+modeled_rows,85932
+minimum_ship_type_rows,300
+contamination_per_method,0.0200
+top_candidates_written,200
+modeled_ship_types,14
+skipped_ship_types,3
+highest_consensus_ship_type,Passenger ship
+highest_consensus_year,2023
+highest_consensus_score,1.000000

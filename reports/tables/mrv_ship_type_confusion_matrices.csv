@@ -1,0 +1,121 @@
+train_scope,ship_type,scenario,feature_set,model,split,actual_label,pred_efficient,pred_medium,pred_inefficient
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,validation,efficient,914,325,118
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,validation,medium,295,662,400
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,validation,inefficient,129,239,989
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,test,efficient,846,317,61
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,test,medium,321,761,141
+unified_model,Bulk carrier,unified_model,strict_static,hist_gradient_boosting,test,inefficient,116,574,533
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,validation,efficient,574,76,19
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,validation,medium,98,407,163
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,validation,inefficient,33,129,506
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,test,efficient,570,63,8
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,test,medium,133,442,65
+unified_model,Oil tanker,unified_model,strict_static,hist_gradient_boosting,test,inefficient,31,318,291
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,validation,efficient,465,109,44
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,validation,medium,71,436,111
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,validation,inefficient,10,112,496
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,test,efficient,438,169,34
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,test,medium,186,189,266
+unified_model,Container ship,unified_model,strict_static,hist_gradient_boosting,test,inefficient,12,34,595
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,validation,efficient,386,65,28
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,validation,medium,134,233,111
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,validation,inefficient,36,127,315
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,test,efficient,395,48,9
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,test,medium,158,247,46
+unified_model,Chemical tanker,unified_model,strict_static,hist_gradient_boosting,test,inefficient,56,241,154
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,validation,efficient,298,84,21
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,validation,medium,80,195,128
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,validation,inefficient,35,36,332
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,test,efficient,303,77,20
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,test,medium,106,121,173
+unified_model,General cargo ship,unified_model,strict_static,hist_gradient_boosting,test,inefficient,36,44,320
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,validation,efficient,896,331,130
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,validation,medium,257,678,422
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,validation,inefficient,113,262,982
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,test,efficient,813,334,77
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,test,medium,303,724,196
+ship_type_model,Bulk carrier,ship_type_model,strict_static,hist_gradient_boosting,test,inefficient,120,522,581
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,efficient,557,100,12
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,medium,69,424,175
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,inefficient,30,120,518
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,test,efficient,554,63,24
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,test,medium,124,409,107
+ship_type_model,Oil tanker,ship_type_model,strict_static,hist_gradient_boosting,test,inefficient,28,251,361
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,validation,efficient,495,101,22
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,validation,medium,68,462,88
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,validation,inefficient,7,93,518
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,test,efficient,468,149,24
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,test,medium,170,271,200
+ship_type_model,Container ship,ship_type_model,strict_static,hist_gradient_boosting,test,inefficient,12,110,519
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,efficient,356,89,34
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,medium,93,271,114
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,validation,inefficient,34,118,326
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,test,efficient,368,68,16
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,test,medium,129,236,86
+ship_type_model,Chemical tanker,ship_type_model,strict_static,hist_gradient_boosting,test,inefficient,34,242,175
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,validation,efficient,320,73,10
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,validation,medium,46,253,104
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,validation,inefficient,22,38,343
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,test,efficient,305,78,17
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,test,medium,86,186,128
+ship_type_model,General cargo ship,ship_type_model,strict_static,hist_gradient_boosting,test,inefficient,40,71,289
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,validation,efficient,925,301,131
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,validation,medium,298,647,412
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,130,237,990
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,test,efficient,855,297,72
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,test,medium,339,715,169
+unified_model,Bulk carrier,unified_model,operational_no_emission,hist_gradient_boosting,test,inefficient,118,513,592
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,efficient,576,70,23
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,medium,113,391,164
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,34,130,504
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,efficient,566,62,13
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,medium,136,439,65
+unified_model,Oil tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,inefficient,36,301,303
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,efficient,463,118,37
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,medium,71,431,116
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,12,111,495
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,test,efficient,422,185,34
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,test,medium,161,219,261
+unified_model,Container ship,unified_model,operational_no_emission,hist_gradient_boosting,test,inefficient,11,35,595
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,efficient,382,70,27
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,medium,126,241,111
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,39,127,312
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,efficient,392,43,17
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,medium,155,244,52
+unified_model,Chemical tanker,unified_model,operational_no_emission,hist_gradient_boosting,test,inefficient,54,243,154
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,efficient,291,88,24
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,medium,68,195,140
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,36,41,326
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,test,efficient,284,97,19
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,test,medium,92,132,176
+unified_model,General cargo ship,unified_model,operational_no_emission,hist_gradient_boosting,test,inefficient,31,56,313
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,efficient,890,339,128
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,medium,270,683,404
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,111,249,997
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,test,efficient,829,323,72
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,test,medium,311,732,180
+ship_type_model,Bulk carrier,ship_type_model,operational_no_emission,hist_gradient_boosting,test,inefficient,108,527,588
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,efficient,561,84,24
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,medium,78,410,180
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,24,122,522
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,efficient,547,77,17
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,medium,121,412,107
+ship_type_model,Oil tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,inefficient,25,261,354
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,efficient,492,102,24
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,medium,84,442,92
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,11,110,497
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,efficient,444,174,23
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,medium,149,242,250
+ship_type_model,Container ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,inefficient,12,112,517
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,efficient,357,84,38
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,medium,89,257,132
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,26,111,341
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,efficient,365,61,26
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,medium,131,241,79
+ship_type_model,Chemical tanker,ship_type_model,operational_no_emission,hist_gradient_boosting,test,inefficient,32,227,192
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,efficient,303,82,18
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,medium,46,231,126
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,validation,inefficient,19,38,346
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,efficient,303,73,24
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,medium,85,154,161
+ship_type_model,General cargo ship,ship_type_model,operational_no_emission,hist_gradient_boosting,test,inefficient,27,65,308
